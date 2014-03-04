@@ -106,3 +106,5 @@
   :draw draw
   :size [500 300]
   :renderer :p3d)
+
+(defn -main[] ())

@@ -59,3 +59,5 @@
   :setup setup
   :mouse-released draw-circles
   :size [500 300])
+
+(defn -main[] ())

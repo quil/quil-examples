@@ -78,3 +78,5 @@
   :draw draw
   :size [500 300]
   :renderer :opengl)
+
+(defn -main[] ())

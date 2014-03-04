@@ -145,3 +145,5 @@
   :draw draw
   :mouse-released mouse-released
   :size [500 300])
+
+(defn -main[] ())
