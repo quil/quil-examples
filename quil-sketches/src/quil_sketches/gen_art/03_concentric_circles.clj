@@ -50,3 +50,5 @@
   :setup setup
   :draw draw
   :size [500 300])
+
+(defn -main[] ())

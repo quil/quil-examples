@@ -56,3 +56,5 @@
   :title "Random Scribble"
   :setup setup
   :size [500 100])
+
+(defn -main[] ())

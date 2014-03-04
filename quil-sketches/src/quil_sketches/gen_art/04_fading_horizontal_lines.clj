@@ -36,3 +36,5 @@
   :title "Fading Horizontal Lines"
   :setup setup
   :size [500 300])
+  
+(defn -main[] ())

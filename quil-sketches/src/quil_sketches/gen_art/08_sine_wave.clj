@@ -53,3 +53,5 @@
   :title "Sine Wave"
   :setup setup
   :size [500 100])
+
+(defn -main[] ())

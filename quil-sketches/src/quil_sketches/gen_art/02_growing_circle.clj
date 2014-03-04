@@ -54,3 +54,5 @@
   :draw draw
   :size [500 300]
   :keep-on-top true)
+
+ (defn -main [] ())
