@@ -52,9 +52,10 @@
             y (range 0 (height) spiral-size)]
       (image gr x y))))
 
-(defn run []
-  (sketch :setup setup
+(defsketch graphics
+	  :title "Graphics"
+	  :setup setup
           :draw draw
-          :size [500 500]))
-(defn -main []
-  (run))
+          :size [500 500])
+
+(defn -main [] ())

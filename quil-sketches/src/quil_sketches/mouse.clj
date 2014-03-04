@@ -1,4 +1,4 @@
-(ns quil_sketches.mouse-example
+(ns quil_sketches.mouse
   (:use quil.core))
 
 (defn setup []
