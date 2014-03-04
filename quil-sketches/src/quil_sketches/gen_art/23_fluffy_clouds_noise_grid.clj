@@ -69,3 +69,5 @@
   :title "Fluffy Clouds 2D Noise Grid"
   :setup setup
   :size [300 300])
+
+(defn -main[] ())

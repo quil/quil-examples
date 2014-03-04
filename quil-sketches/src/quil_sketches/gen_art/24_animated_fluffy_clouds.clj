@@ -99,3 +99,5 @@
   :setup setup
   :draw draw
   :size [300 300])
+
+(defn -main[] ())

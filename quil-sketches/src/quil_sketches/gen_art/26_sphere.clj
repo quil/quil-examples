@@ -25,3 +25,5 @@
   :setup setup
   :size [500 300]
   :renderer :opengl)
+
+(defn -main[] ())
