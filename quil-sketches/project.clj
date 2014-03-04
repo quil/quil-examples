@@ -6,4 +6,4 @@
   :dependencies [[org.clojure/clojure "1.5.1"]
 		  [quil "1.7.0"]]
 ;; put the namespace of the example You wish to run after :main in next line 
-)
+   :main quil_sketches.gen-art.01-cross-with-circle)

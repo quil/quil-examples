@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.cross-with-circle
+(ns quil_sketches.gen-art.01-cross-with-circle
   (:use quil.core))
 
 ;; Example 1 - Cross with Circle
