@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.27-noise-perspectivea
+(ns quil_sketches.gen-art.27-noise-perspective
   (:use quil.core
         [quil.helpers.seqs :only [indexed-range-incl seq->stream steps]]
         [quil.helpers.calc :only [mul-add]]))
@@ -87,3 +87,5 @@
   :draw draw
   :size [500 300]
   :renderer :opengl)
+
+(defn -main[] ())
