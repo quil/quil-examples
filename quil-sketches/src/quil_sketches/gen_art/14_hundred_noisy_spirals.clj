@@ -68,3 +68,5 @@
   :title "100 Noisy Spirals"
   :setup setup
   :size [500 300])
+
+(defn -main[] ())

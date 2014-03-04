@@ -65,3 +65,5 @@
   :title "Warped Circle from Fading Opposing Lines"
   :setup setup
   :size [500 300])
+
+(defn -main[] ())

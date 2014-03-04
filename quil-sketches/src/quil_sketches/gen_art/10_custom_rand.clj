@@ -60,3 +60,5 @@
   :title "Custom Random Function"
   :setup setup
   :size [500 100])
+
+(defn -main[] ())
