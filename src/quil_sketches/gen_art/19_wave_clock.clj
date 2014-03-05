@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.19-wave-clock
+(ns quil-sketches.gen-art.19-wave-clock
   (:use quil.core
         [quil.helpers.seqs :only [cycle-between seq->stream steps]]
         [quil.helpers.calc :only [mul-add]]))
@@ -109,4 +109,4 @@
   :draw draw
   :size [500 300])
 
-(defn -main[] ())
+(defn -main[& args])

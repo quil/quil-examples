@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.26-sphere
+(ns quil-sketches.gen-art.26-sphere
   (:use quil.core))
 
 ;; Example 26 - 3D Sphere
@@ -26,4 +26,4 @@
   :size [500 300]
   :renderer :opengl)
 
-(defn -main[] ())
+(defn -main[& args])

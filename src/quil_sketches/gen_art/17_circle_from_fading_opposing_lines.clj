@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.17-circle-from-fading-opposing-lines
+(ns quil-sketches.gen-art.17-circle-from-fading-opposing-lines
   (:use quil.core
         [quil.helpers.seqs :only [range-incl]]
         [quil.helpers.calc :only [mul-add]]))
@@ -63,4 +63,4 @@
  :setup setup
  :size [500 300])
 
-(defn -main[] ())
+(defn -main[& args])

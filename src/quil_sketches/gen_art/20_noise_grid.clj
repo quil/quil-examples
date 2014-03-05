@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.20-noise-grid
+(ns quil-sketches.gen-art.20-noise-grid
   (:use quil.core
         [quil.helpers.seqs :only [range-incl]]
         [quil.helpers.calc :only [mul-add]]))
@@ -44,4 +44,4 @@
   :setup setup
   :size [300 300])
 
-(defn -main[] ())
+(defn -main[& args])

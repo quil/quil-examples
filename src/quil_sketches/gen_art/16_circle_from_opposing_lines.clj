@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.16-circle-from-opposing-lines
+(ns quil-sketches.gen-art.16-circle-from-opposing-lines
   (:use quil.core
         [quil.helpers.drawing :only [line-join-points]]
         [quil.helpers.seqs :only [range-incl]]
@@ -55,4 +55,4 @@
   :setup setup
   :size [500 300])
 
-(defn -main[] ())
+(defn -main[& args])

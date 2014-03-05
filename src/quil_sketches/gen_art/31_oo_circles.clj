@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.31-oo_circles
+(ns quil-sketches.gen-art.31-oo_circles
   (:use quil.core
         [quil.helpers.calc :only [mod-range]]))
 
@@ -146,4 +146,4 @@
   :mouse-released mouse-released
   :size [500 300])
 
-(defn -main[] ())
+(defn -main[& args])

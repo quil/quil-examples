@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.28-cloud-cube
+(ns quil-sketches.gen-art.28-cloud-cube
   (:use quil.core
         [quil.helpers.seqs :only [indexed-range-incl]]
         [quil.helpers.calc :only [mul-add]]))
@@ -107,4 +107,4 @@
   :size [500 300]
   :renderer :p3d)
 
-(defn -main[] ())
+(defn -main[& args])

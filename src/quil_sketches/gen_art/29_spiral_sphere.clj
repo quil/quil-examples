@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.29-spiral-sphere
+(ns quil-sketches.gen-art.29-spiral-sphere
   (:use quil.core
         [quil.helpers.drawing :only [line-join-points]]
         [quil.helpers.calc :only [mul-add]]))
@@ -79,4 +79,4 @@
   :size [500 300]
   :renderer :opengl)
 
-(defn -main[] ())
+(defn -main[& args])

@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.24-animated-fluffy-clouds
+(ns quil-sketches.gen-art.24-animated-fluffy-clouds
   (:use quil.core
         [quil.helpers.seqs :only [steps seq->stream range-incl tap]]
         [quil.helpers.calc :only [mul-add]]))
@@ -100,4 +100,4 @@
   :draw draw
   :size [300 300])
 
-(defn -main[] ())
+(defn -main[& args])

@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.25-animated-rotated-lines
+(ns quil-sketches.gen-art.25-animated-rotated-lines
   (:use quil.core
         [quil.helpers.seqs :only [steps seq->stream range-incl tap tally indexed-range-incl]]
         [quil.helpers.calc :only [mul-add]]))
@@ -106,4 +106,4 @@
   :draw draw
   :size [300 300])
 
-(defn -main[] ())
+(defn -main[& args])

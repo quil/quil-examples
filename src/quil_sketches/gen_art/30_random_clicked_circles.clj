@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.30-random-clicked-circles
+(ns quil-sketches.gen-art.30-random-clicked-circles
   (:use quil.core))
 
 ;; Example 30 - Random Clicked Circles
@@ -60,4 +60,4 @@
   :mouse-released draw-circles
   :size [500 300])
 
-(defn -main[] ())
+(defn -main[& args])
