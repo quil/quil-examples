@@ -67,6 +67,6 @@ You can run other sketches by opening their files and evaluate their contents vi
 
 ### How to create your own sketch
 
-It is simple. You can either modify existing sketch or create new one. To create new sketch first you need to create sketch file e.g. `src/quil_sketches/my_super_sketch.clj` and use some existing sketch as initial template (don't forget to modify namespace to `quil-sketches.my-super-sketch`!).
+It is simple. You can either modify existing sketch or create new one. To create new sketch first you need to create sketch file e.g. `src/quil_sketches/my_super_sketch.clj` and use some existing sketch as initial template (don't forget to modify namespace to `quil-sketches.my-super-sketch`).
 
 Happy hacking!
