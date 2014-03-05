@@ -1,4 +1,4 @@
-(ns quil_sketches.graphics
+(ns quil-sketches.graphics
   (:use quil.core
         [quil.helpers.drawing :only [line-join-points]]
         [quil.helpers.seqs :only [range-incl steps]]))
@@ -58,4 +58,4 @@
           :draw draw
           :size [500 500])
 
-(defn -main [] ())
+(defn -main [& args])

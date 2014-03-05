@@ -1,4 +1,4 @@
-(ns quil_sketches.key_capture
+(ns quil-sketches.key_capture
 	(:use quil.core))
 
 (def current-text-size (atom 20))
@@ -32,3 +32,5 @@
   :setup setup
   :draw draw
   :key-typed key-press)
+  
+(defn -main[& args])

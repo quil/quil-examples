@@ -1,4 +1,4 @@
-(ns quil_sketches.example2
+(ns quil-sketches.example2
   (:use quil.core))
 
 ;; here's a function which will be called by Processing's (PApplet)
@@ -37,4 +37,4 @@
   :draw draw
   :size [200 200])
 
-(defn -main[] ())
+(defn -main[& args])

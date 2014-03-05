@@ -1,4 +1,4 @@
-(ns quil_sketches.key-mover
+(ns quil-sketches.key-mover
 	(:use quil.core)
   (:import java.awt.event.KeyEvent))
 
@@ -75,3 +75,5 @@
   :draw draw
   :target :perm-frame 
   :key-pressed key-press)
+
+(defn -main[& args])

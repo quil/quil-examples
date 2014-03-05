@@ -1,4 +1,4 @@
-(ns quil_sketches.automata
+(ns quil-sketches.automata
   "This module visualizes elementary cellular automata. It's primarily intended
    to show off the fun aspects of functional programming and lazy-sequences in clojure to those who are coming from an OO background.
 

@@ -1,4 +1,4 @@
-(ns quil_sketches.mouse-wheel
+(ns quil-sketches.mouse-wheel
   (:use quil.core
         [quil.helpers.drawing :only [line-join-points]]
         [quil.helpers.calc :only [mul-add]]))
@@ -38,5 +38,5 @@
   :renderer :p3d
   :mouse-wheel mouse-wheel)
 
-
+(defn -main[& args])
 

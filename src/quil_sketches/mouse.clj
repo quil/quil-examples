@@ -1,4 +1,4 @@
-(ns quil_sketches.mouse
+(ns quil-sketches.mouse
   (:use quil.core))
 
 (defn setup []
@@ -24,3 +24,5 @@
   :setup setup
   :draw draw
   :mouse-moved mouse-moved)
+
+(defn -main[& args])
