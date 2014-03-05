@@ -73,7 +73,7 @@
   :size (params :screen-dimensions)
   :setup setup
   :draw draw
-  :target :perm-frame 
+  :target :perm-frame
   :key-pressed key-press)
 
-(defn -main[& args])
+(defn -main [& args])

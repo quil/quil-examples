@@ -146,4 +146,4 @@
   :mouse-released mouse-released
   :size [500 300])
 
-(defn -main[& args])
+(defn -main [& args])

@@ -100,4 +100,4 @@
   :draw draw
   :size [300 300])
 
-(defn -main[& args])
+(defn -main [& args])

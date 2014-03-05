@@ -107,4 +107,4 @@
   :size [500 300]
   :renderer :p3d)
 
-(defn -main[& args])
+(defn -main [& args])

@@ -38,5 +38,5 @@
   :renderer :p3d
   :mouse-wheel mouse-wheel)
 
-(defn -main[& args])
+(defn -main [& args])
 

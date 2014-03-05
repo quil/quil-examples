@@ -32,5 +32,5 @@
   :setup setup
   :draw draw
   :key-typed key-press)
-  
-(defn -main[& args])
+
+(defn -main [& args])

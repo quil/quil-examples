@@ -39,4 +39,5 @@
   :title "Cross with circle"
   :setup setup
   :size [500 300])
-(defn -main[& args])
+
+(defn -main [& args])

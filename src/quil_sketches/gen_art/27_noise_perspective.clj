@@ -88,4 +88,4 @@
   :size [500 300]
   :renderer :opengl)
 
-(defn -main[& args])
+(defn -main [& args])

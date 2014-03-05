@@ -59,4 +59,4 @@
   :setup setup
   :size [500 100])
 
- (defn -main[& args])
+ (defn -main [& args])

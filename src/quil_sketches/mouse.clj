@@ -25,4 +25,4 @@
   :draw draw
   :mouse-moved mouse-moved)
 
-(defn -main[& args])
+(defn -main [& args])
