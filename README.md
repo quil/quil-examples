@@ -3,7 +3,7 @@ Quil examples
 
 Examples of different Quil sketches.
 
-Check `src/quil_sketches` folder and it's subfolders. Each `.clj` file is a separate sketch. Some of them shows particular Quil feature and some of them are simply beatiful animations. You can start by running them one by one and studying their sources.
+Check `src/quil_sketches` folder and it's subfolders. Each `.clj` file is a separate sketch. Some of them shows particular Quil feature and some of them are simply beatiful animations. You can start with running them one by one and studying their sources.
 
 ### How to run examples
 
@@ -39,8 +39,14 @@ When you close sketch JVM won't exit, so you need to do it manually e.g. using `
 ##### Using LightTable
 
 Start LightTable.  
-Open folder with quil-sketches project: `File -> Open folder`.  
-Open file containing sketch and evaluate it using `Ctrl+Shift+Enter` combination.
+Open folder containing the project: 
+```
+File -> Open folder
+```
+Open file containing sketch and evaluate it using following keys combination:
+```
+Ctrl+Shift+Enter
+```
 
 ##### Using emacs
 
@@ -58,3 +64,9 @@ C-c C-k
 ```
 Sketch will open. 
 You can run other sketches by opening their files and evaluate their contents via `C-c C-k`
+
+### How to create your own sketch
+
+It is simple. You can either modify existing sketch or create new one. To create new sketch first you need to create sketch file e.g. `src/quil_sketches/my_super_sketch.clj` and use some existing sketch as initial template (don't forget to modify namespace to `quil-sketches.my-super-sketch`!).
+
+Happy hacking!
