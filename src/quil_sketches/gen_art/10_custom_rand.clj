@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.10-custom-rand
+(ns quil-sketches.gen-art.10-custom-rand
   (:use quil.core
         [quil.helpers.drawing :only [line-join-points]]
         [quil.helpers.seqs :only [range-incl]]
@@ -61,4 +61,4 @@
   :setup setup
   :size [500 100])
 
-(defn -main[] ())
+(defn -main[& args])

@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.03-concentric-circles
+(ns quil-sketches.gen-art.03-concentric-circles
   (:use quil.core))
 
 ;; Example 3 - Concentric circles drawn using traces
@@ -51,4 +51,4 @@
   :draw draw
   :size [500 300])
 
-(defn -main[] ())
+(defn -main[& args])

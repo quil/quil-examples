@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.01-cross-with-circle
+(ns quil-sketches.gen-art.01-cross-with-circle
   (:use quil.core))
 
 ;; Example 1 - Cross with Circle
@@ -39,4 +39,4 @@
   :title "Cross with circle"
   :setup setup
   :size [500 300])
-(defn -main[]())
+(defn -main[& args])

@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.08-sine-save
+(ns quil-sketches.gen-art.08-sine-save
   (:use quil.core
         [quil.helpers.drawing :only [line-join-points]]
         [quil.helpers.seqs :only [range-incl]]
@@ -54,4 +54,4 @@
   :setup setup
   :size [500 100])
 
-(defn -main[] ())
+(defn -main[& args])

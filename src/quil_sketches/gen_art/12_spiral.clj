@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.12-aspiral
+(ns quil-sketches.gen-art.12-aspiral
   (:use quil.core
         [quil.helpers.drawing :only [line-join-points]]
         [quil.helpers.seqs :only [range-incl steps]]))
@@ -58,4 +58,4 @@
   :setup setup
   :size [500 300])
 
-(defn -main[] ())
+(defn -main[& args])

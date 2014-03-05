@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.04-fading-horizontal-lines
+(ns quil-sketches.gen-art.04-fading-horizontal-lines
   (:use quil.core))
 
 ;; Example 4 - Fading Horizontal Lines
@@ -37,4 +37,4 @@
   :setup setup
   :size [500 300])
   
-(defn -main[] ())
+(defn -main[& args])

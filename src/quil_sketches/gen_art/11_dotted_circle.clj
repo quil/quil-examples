@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.11-dotted-circle
+(ns quil-sketches.gen-art.11-dotted-circle
   (:use quil.core
         [quil.helpers.drawing :only [line-join-points]]
         [quil.helpers.seqs :only [range-incl]]))
@@ -50,4 +50,4 @@
   :setup setup
   :size [500 300])
 
-(defn -main[] ())
+(defn -main[& args])

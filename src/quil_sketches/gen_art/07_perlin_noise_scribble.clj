@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.07-perlin-noise-scribble
+(ns quil-sketches.gen-art.07-perlin-noise-scribble
   (:use quil.core
         [quil.helpers.drawing :only [line-join-points]]
         [quil.helpers.seqs :only [range-incl perlin-noise-seq]]
@@ -59,4 +59,4 @@
   :setup setup
   :size [500 100])
 
- (defn -main[] ())
+ (defn -main[& args])

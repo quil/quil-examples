@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.06-rand-walk-scribble
+(ns quil-sketches.gen-art.06-rand-walk-scribble
   (:use quil.core
         [quil.helpers.drawing :only [line-join-points]]
         [quil.helpers.seqs :only [range-incl]]))
@@ -55,4 +55,4 @@
   :setup setup
   :size [500 100])
 
- (defn -main[] ())
+ (defn -main[& args])

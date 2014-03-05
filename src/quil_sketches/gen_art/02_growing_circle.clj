@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.02-growing-circle
+(ns quil-sketches.gen-art.02-growing-circle
   (:use quil.core
         [quil.helpers.seqs :only [seq->stream range-incl]]))
 
@@ -55,4 +55,4 @@
   :size [500 300]
   :keep-on-top true)
 
- (defn -main [] ())
+ (defn -main [& args])

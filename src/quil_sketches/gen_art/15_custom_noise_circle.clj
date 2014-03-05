@@ -1,4 +1,4 @@
-(ns quil_sketches.gen-art.15-noise-circle
+(ns quil-sketches.gen-art.15-noise-circle
   (:use quil.core
         [quil.helpers.drawing :only [line-join-points]]
         [quil.helpers.seqs :only [range-incl]]
@@ -88,4 +88,4 @@
   :setup setup
   :size [500 300])
 
-(defn -main[] ())
+(defn -main[& args])
