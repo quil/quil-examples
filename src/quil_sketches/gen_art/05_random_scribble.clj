@@ -1,7 +1,7 @@
 (ns quil-sketches.gen-art.05-random-scribble
   (:require [quil.core :refer :all]
-        [quil.helpers.seqs :refer [range-incl]]
-        [quil.helpers.drawing :refer [line-join-points]]))
+            [quil.helpers.seqs :refer [range-incl]]
+            [quil.helpers.drawing :refer [line-join-points]]))
 
 ;; Example 5 - Random Scribble
 ;; Taken from Section 3.2, p55

@@ -1,7 +1,7 @@
 (ns quil-sketches.gen-art.17-circle-from-fading-opposing-lines
   (:require [quil.core :refer :all]
-        [quil.helpers.seqs :refer [range-incl]]
-        [quil.helpers.calc :refer [mul-add]]))
+            [quil.helpers.seqs :refer [range-incl]]
+            [quil.helpers.calc :refer [mul-add]]))
 
 ;; Example 17 - Circle from Fading Opposing Lines
 ;; Taken from Section 4.2, p79 (Figure 4.12)

@@ -1,8 +1,8 @@
 (ns quil-sketches.gen-art.07-perlin-noise-scribble
   (:require [quil.core :refer :all]
-        [quil.helpers.drawing :refer [line-join-points]]
-        [quil.helpers.seqs :refer [range-incl perlin-noise-seq]]
-        [quil.helpers.calc :refer [mul-add]]))
+            [quil.helpers.drawing :refer [line-join-points]]
+            [quil.helpers.seqs :refer [range-incl perlin-noise-seq]]
+            [quil.helpers.calc :refer [mul-add]]))
 
 ;; Example 7 - Perlin Noise Scribblea
 ;; Taken from Listing 3.1, p59

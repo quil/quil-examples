@@ -1,8 +1,8 @@
 (ns quil-sketches.gen-art.14-hundred-noisy-spirals
   (:require [quil.core :refer :all]
-        [quil.helpers.drawing :refer [line-join-points]]
-        [quil.helpers.seqs :refer [range-incl steps]]
-        [quil.helpers.calc :refer [mul-add]]))
+            [quil.helpers.drawing :refer [line-join-points]]
+            [quil.helpers.seqs :refer [range-incl steps]]
+            [quil.helpers.calc :refer [mul-add]]))
 
 ;; Example 14 - 100 Noisy Spirals
 ;; Taken from Listing 4.4, p71

@@ -1,7 +1,7 @@
 (ns quil-sketches.gen-art.11-dotted-circle
   (:require [quil.core :refer :all]
-        [quil.helpers.drawing :refer [line-join-points]]
-        [quil.helpers.seqs :refer [range-incl]]))
+            [quil.helpers.drawing :refer [line-join-points]]
+            [quil.helpers.seqs :refer [range-incl]]))
 
 ;; Example 11 - Dotted Circle
 ;; Taken from Listing 4.1, p68

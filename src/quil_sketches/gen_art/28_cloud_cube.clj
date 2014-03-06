@@ -1,7 +1,7 @@
 (ns quil-sketches.gen-art.28-cloud-cube
   (:require [quil.core :refer :all]
-        [quil.helpers.seqs :refer [indexed-range-incl]]
-        [quil.helpers.calc :refer [mul-add]]))
+            [quil.helpers.seqs :refer [indexed-range-incl]]
+            [quil.helpers.calc :refer [mul-add]]))
 
 ;; Example 28 - A Cube of 3D Noise
 ;; Taken from Listing 5.6, p97

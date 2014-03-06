@@ -1,7 +1,7 @@
 (ns quil-sketches.gen-art.19-wave-clock
   (:require [quil.core :refer :all]
-        [quil.helpers.seqs :refer [cycle-between seq->stream steps]]
-        [quil.helpers.calc :refer [mul-add]]))
+            [quil.helpers.seqs :refer [cycle-between seq->stream steps]]
+            [quil.helpers.calc :refer [mul-add]]))
 
 ;; Example 19 - Wave Clock
 ;; Taken from Listing 4.6, p79

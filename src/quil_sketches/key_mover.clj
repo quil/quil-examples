@@ -1,5 +1,5 @@
 (ns quil-sketches.key-mover
-	(:require [quil.core :refer :all])
+  (:require [quil.core :refer :all])
   (:import java.awt.event.KeyEvent))
 
 (def params {

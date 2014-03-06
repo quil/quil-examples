@@ -1,5 +1,5 @@
 (ns quil-sketches.key_capture
-	(:require [quil.core :refer :all]))
+  (:require [quil.core :refer :all]))
 
 (def current-text-size (atom 20))
 

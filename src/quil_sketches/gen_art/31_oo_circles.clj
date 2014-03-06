@@ -1,6 +1,6 @@
 (ns quil-sketches.gen-art.31-oo_circles
   (:require [quil.core :refer :all]
-        [quil.helpers.calc :refer [mod-range]]))
+            [quil.helpers.calc :refer [mod-range]]))
 
 ;; Example 31 - OO Circles
 ;; Taken from Listing 6.4, p117

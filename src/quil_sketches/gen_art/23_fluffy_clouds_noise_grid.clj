@@ -1,7 +1,7 @@
 (ns quil-sketches.gen-art.23-fluffy-clouds-noise-grid
   (:require [quil.core :refer :all]
-        [quil.helpers.seqs :refer [range-incl]]
-        [quil.helpers.calc :refer [mul-add]]))
+            [quil.helpers.seqs :refer [range-incl]]
+            [quil.helpers.calc :refer [mul-add]]))-
 
 ;; Example 23 - Fluffy Clouds 2D Noise Grid
 ;; Taken from Section 5.1.2, p88 (figure 5.4)

@@ -1,7 +1,7 @@
 (ns quil-sketches.gen-art.22-squared-noise-grid
   (:require [quil.core :refer :all]
-        [quil.helpers.seqs :refer [range-incl]]
-        [quil.helpers.calc :refer [mul-add]]))
+            [quil.helpers.seqs :refer [range-incl]]
+            [quil.helpers.calc :refer [mul-add]]))
 
 ;; Example 21 - Squared 2D Noise Grid
 ;; Taken from Listing 5.2, p86

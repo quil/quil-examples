@@ -1,8 +1,8 @@
 (ns quil-sketches.gen-art.10-custom-rand
   (:require [quil.core :refer :all]
-        [quil.helpers.drawing :refer [line-join-points]]
-        [quil.helpers.seqs :refer [range-incl]]
-        [quil.helpers.calc :refer [mul-add]]))
+            [quil.helpers.drawing :refer [line-join-points]]
+            [quil.helpers.seqs :refer [range-incl]]
+            [quil.helpers.calc :refer [mul-add]]))
 
 ;; Example 10 - Custome Random Function
 ;; Taken from Listing 3.2, p60
