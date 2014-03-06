@@ -1,7 +1,7 @@
 (ns quil-sketches.gen-art.27-noise-perspective
-  (:use quil.core
-        [quil.helpers.seqs :only [indexed-range-incl seq->stream steps]]
-        [quil.helpers.calc :only [mul-add]]))
+  (:require [quil.core :refer :all]
+        [quil.helpers.seqs :refer [indexed-range-incl seq->stream steps]]
+        [quil.helpers.calc :refer [mul-add]]))
 
 ;; Example 27 - 2D Noise from a 3D Perspectivea
 ;; Taken from Listing 5.5, p95

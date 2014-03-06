@@ -1,7 +1,7 @@
 (ns quil-sketches.gen-art.25-animated-rotated-lines
-  (:use quil.core
-        [quil.helpers.seqs :only [steps seq->stream range-incl tap tally indexed-range-incl]]
-        [quil.helpers.calc :only [mul-add]]))
+  (:require [quil.core :refer :all]
+        [quil.helpers.seqs :refer [steps seq->stream range-incl tap tally indexed-range-incl]]
+        [quil.helpers.calc :refer [mul-add]]))
 
 ;; Example 25 - Animated Rotated Lines
 ;; Taken from Listing 5.4, p91

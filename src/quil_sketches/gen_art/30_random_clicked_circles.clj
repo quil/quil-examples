@@ -1,5 +1,5 @@
 (ns quil-sketches.gen-art.30-random-clicked-circles
-  (:use quil.core))
+  (:require [quil.core :refer :all]))
 
 ;; Example 30 - Random Clicked Circles
 ;; Taken from Listing 6.1, p113

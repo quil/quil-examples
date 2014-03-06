@@ -1,5 +1,5 @@
 (ns quil-sketches.example2
-  (:use quil.core))
+  (:require [quil.core :refer :all]))
 
 ;; here's a function which will be called by Processing's (PApplet)
 ;; draw method every frame. Place your code here. If you eval it

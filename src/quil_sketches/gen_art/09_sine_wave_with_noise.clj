@@ -1,8 +1,8 @@
 (ns quil-sketches.gen-art.09-sine-wave-with-noise
-  (:use quil.core
-        [quil.helpers.drawing :only [line-join-points]]
-        [quil.helpers.seqs :only [range-incl]]
-        [quil.helpers.calc :only [mul-add]]))
+  (:require [quil.core :refer :all]
+        [quil.helpers.drawing :refer [line-join-points]]
+        [quil.helpers.seqs :refer [range-incl]]
+        [quil.helpers.calc :refer [mul-add]]))
 
 ;; Example 9 - Sine Wave with Noise
 ;; Taken from Listing 3.2, p60

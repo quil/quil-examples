@@ -1,7 +1,7 @@
 (ns quil-sketches.gen-art.06-rand-walk-scribble
-  (:use quil.core
-        [quil.helpers.drawing :only [line-join-points]]
-        [quil.helpers.seqs :only [range-incl]]))
+  (:require [quil.core :refer :all]
+        [quil.helpers.drawing :refer [line-join-points]]
+        [quil.helpers.seqs :refer [range-incl]]))
 
 ;; Example 6 - Random Walk Scribble
 ;; Taken from Section 3.2, p56

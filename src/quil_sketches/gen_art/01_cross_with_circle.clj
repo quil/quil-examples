@@ -1,5 +1,5 @@
 (ns quil-sketches.gen-art.01-cross-with-circle
-  (:use quil.core))
+  (:require [quil.core :refer :all]))
 
 ;; Example 1 - Cross with Circle
 ;; Taken from Section 2.2.1, p20

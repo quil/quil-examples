@@ -1,7 +1,7 @@
 (ns quil-sketches.gen-art.20-noise-grid
-  (:use quil.core
-        [quil.helpers.seqs :only [range-incl]]
-        [quil.helpers.calc :only [mul-add]]))
+  (:require [quil.core :refer :all]
+        [quil.helpers.seqs :refer [range-incl]]
+        [quil.helpers.calc :refer [mul-add]]))
 
 ;; Example 20 - 2D Noise Grid
 ;; Taken from Listing 5.1, p84

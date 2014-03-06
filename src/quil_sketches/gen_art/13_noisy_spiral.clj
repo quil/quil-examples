@@ -1,8 +1,8 @@
 (ns quil-sketches.gen-art.13-noisy-spiral
-  (:use quil.core
-        [quil.helpers.drawing :only [line-join-points]]
-        [quil.helpers.seqs :only [range-incl steps]]
-        [quil.helpers.calc :only [mul-add]]))
+  (:require [quil.core :refer :all]
+        [quil.helpers.drawing :refer [line-join-points]]
+        [quil.helpers.seqs :refer [range-incl steps]]
+        [quil.helpers.calc :refer [mul-add]]))
 
 ;; Example 13 - Noisy Spiral
 ;; Taken from Listing 4.3, p69
