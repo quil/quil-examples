@@ -1,6 +1,6 @@
 (ns quil-sketches.gen-art.02-growing-circle
-  (:use quil.core
-        [quil.helpers.seqs :only [seq->stream range-incl]]))
+  (:require [quil.core :refer :all]
+        [quil.helpers.seqs :refer [seq->stream range-incl]]))
 
 ;; Example 2 - Growing Circle
 ;; Taken from Listing 2.1, p28

@@ -1,8 +1,8 @@
 (ns quil-sketches.gen-art.15-noise-circle
-  (:use quil.core
-        [quil.helpers.drawing :only [line-join-points]]
-        [quil.helpers.seqs :only [range-incl]]
-        [quil.helpers.calc :only [mul-add]]))
+  (:require [quil.core :refer :all]
+        [quil.helpers.drawing :refer [line-join-points]]
+        [quil.helpers.seqs :refer [range-incl]]
+        [quil.helpers.calc :refer [mul-add]]))
 
 ;; Example 15 - Custom Noise Circle
 ;; Taken from Listing 4.5, p73

@@ -1,5 +1,5 @@
 (ns quil-sketches.gen-art.04-fading-horizontal-lines
-  (:use quil.core))
+  (:require [quil.core :refer :all]))
 
 ;; Example 4 - Fading Horizontal Lines
 ;; Taken from Section 2.4.3, p 39

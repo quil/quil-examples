@@ -1,5 +1,5 @@
 (ns quil-sketches.gen-art.03-concentric-circles
-  (:use quil.core))
+  (:require [quil.core :refer :all]))
 
 ;; Example 3 - Concentric circles drawn using traces
 ;; Taken from Listing 2.3, p37

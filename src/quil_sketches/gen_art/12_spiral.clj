@@ -1,7 +1,7 @@
 (ns quil-sketches.gen-art.12-aspiral
-  (:use quil.core
-        [quil.helpers.drawing :only [line-join-points]]
-        [quil.helpers.seqs :only [range-incl steps]]))
+  (:require [quil.core :refer :all]
+        [quil.helpers.drawing :refer [line-join-points]]
+        [quil.helpers.seqs :refer [range-incl steps]]))
 
 ;; Example 12 - Spiral
 ;; Taken from Listing 4.2, p69

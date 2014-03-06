@@ -1,5 +1,5 @@
 (ns quil-sketches.gen-art.26-sphere
-  (:use quil.core))
+  (:require [quil.core :refer :all]))
 
 ;; Example 26 - 3D Sphere
 ;; Taken from Section 5.3.1, p94

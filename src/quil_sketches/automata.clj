@@ -29,8 +29,8 @@
    meaning that it returns a brand new function. The function it returns implements a given rule, matching the patterns
    of the rule to outputs"
   (:gen-class)
-  (:require [quil.core :as qc])
-  (:use clojure.pprint)
+  (:require [quil.core :as qc]
+	    [clojure.pprint :refer :all])
   (:import java.lang.Math))
 
 ;; Colors for each cell

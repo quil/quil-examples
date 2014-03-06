@@ -1,7 +1,7 @@
 (ns quil-sketches.gen-art.22-rotating-lines-noise-grid
-  (:use quil.core
-        [quil.helpers.seqs :only [range-incl]]
-        [quil.helpers.calc :only [mul-add]]))
+  (:require [quil.core :refer :all]
+        [quil.helpers.seqs :refer [range-incl]]
+        [quil.helpers.calc :refer [mul-add]]))
 
 ;; Example 22 - Rotating Lines 2D Noise Grid
 ;; Taken from Section 5.12, p86 (Figure 5.3)

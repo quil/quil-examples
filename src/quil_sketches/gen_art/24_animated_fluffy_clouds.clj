@@ -1,7 +1,7 @@
 (ns quil-sketches.gen-art.24-animated-fluffy-clouds
-  (:use quil.core
-        [quil.helpers.seqs :only [steps seq->stream range-incl tap]]
-        [quil.helpers.calc :only [mul-add]]))
+  (:require [quil.core :refer :all]
+        [quil.helpers.seqs :refer [steps seq->stream range-incl tap]]
+        [quil.helpers.calc :refer [mul-add]]))
 
 ;; Example 24 - Animated Fluffy Clouds
 ;; Taken from Listing 5.3, p89

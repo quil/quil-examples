@@ -1,7 +1,7 @@
 (ns quil-sketches.mouse-wheel
-  (:use quil.core
-        [quil.helpers.drawing :only [line-join-points]]
-        [quil.helpers.calc :only [mul-add]]))
+  (:require [quil.core :refer :all]
+        [quil.helpers.drawing :refer [line-join-points]]
+        [quil.helpers.calc :refer [mul-add]]))
 
 (def radius 100)
 

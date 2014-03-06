@@ -1,7 +1,7 @@
 (ns quil-sketches.gen-art.29-spiral-sphere
-  (:use quil.core
-        [quil.helpers.drawing :only [line-join-points]]
-        [quil.helpers.calc :only [mul-add]]))
+  (:require [quil.core :refer :all]
+        [quil.helpers.drawing :refer [line-join-points]]
+        [quil.helpers.calc :refer [mul-add]]))
 
 ;; Example 29 - Spiral Sphere
 ;; Taken from Listing 5.7, p100

@@ -1,7 +1,7 @@
 (ns quil-sketches.gen-art.18-warped-circle-from-fading-opposing-lines
-  (:use quil.core
-        [quil.helpers.seqs :only [range-incl steps]]
-        [quil.helpers.calc :only [mul-add]]))
+  (:require [quil.core :refer :all]
+        [quil.helpers.seqs :refer [range-incl steps]]
+        [quil.helpers.calc :refer [mul-add]]))
 
 ;; Example 18 - Warped Circle from Fading Opposing Lines
 ;; Taken from Section 4.2, p79 (Figure 4.13)

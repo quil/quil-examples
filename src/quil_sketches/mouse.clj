@@ -1,5 +1,5 @@
 (ns quil-sketches.mouse
-  (:use quil.core))
+  (:require [quil.core :refer :all]))
 
 (defn setup []
   (smooth)
