@@ -1,7 +1,7 @@
 Quil examples
 =============
 
-Examples of different Quil sketches.
+Examples of Quil sketches.
 
 Check `src/quil_sketches` folder and it's subfolders. Each `.clj` file is a separate sketch. Some of them shows particular Quil feature and some of them are simply beatiful animations. You can start with running them one by one and studying their sources.
 
@@ -24,8 +24,8 @@ Require selected sketch to run it:
 user=> (require 'quil-sketches.gen-art.01-cross-with-circle :reload)
 ```
 Note: 
-* you should start sketch namespace with single quote: `'quil-sketches.mouse` 
-* `:reload` option is needed if you want to run it several times. Otherwise sketch won't run on second and subsequent calls.
+* you should prefix sketch namespace with single quote: `'quil-sketches.gen-art.01-cross-with-circle` 
+* `:reload` option is needed if you want to run it several times. Otherwise sketch won't run on second and subsequent `require` calls.
 
 
 ##### Using `lein run`
