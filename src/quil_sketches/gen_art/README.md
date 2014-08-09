@@ -93,98 +93,98 @@ Key examples from the book Generative Art by Matt Pearson translated from Proces
 (p73 - Listing 4.5)
 
 ## 16. Circle from Opposing Lines
-![Circle from Opposing Lines](https://github.com/downloads/quil/quil/gen-art-circle-from-opposing-lines.jpg)
+![Circle from Opposing Lines](https://cloud.githubusercontent.com/assets/252053/3864369/1ecd04c8-1f5b-11e4-9762-ae495838c9f2.jpg)
 
 [View Source](16_circle_from_opposing_lines.clj)
 (p76 - Section 4.2)
 
 ## 17. Circle from Fading Opposing Lines
-![Circle from Fading Opposing Lines](https://github.com/downloads/quil/quil/gen-art-circle-from-fading-opposing-lines.jpg)
+![Circle from Fading Opposing Lines](https://cloud.githubusercontent.com/assets/252053/3864371/45de74fc-1f5b-11e4-9e31-bc6688dd83c0.jpg)
 
 [View Source](17_circle_from_fading_opposing_lines.clj)
 (p79 - Section 4.2 - Figure 4.12)
 
 ## 18. Warped Circle from Fading Opposing Lines
-![Warped Circle from Fading Opposing Lines](https://github.com/downloads/quil/quil/gen-art-warped-circle-from-fading-opposing-lines.jpg)
+![Warped Circle from Fading Opposing Lines](https://cloud.githubusercontent.com/assets/252053/3864375/604717ae-1f5b-11e4-95c4-b4a1b9c1d034.jpg)
 
 [View Source](18_warped_circle_from_fading_opposing_lines.clj)
 (p79 - Section 4.2 - Figure 4.1)
 
 ## 19. Wave Clock
-![Wave Clock](https://github.com/downloads/quil/quil/gen-art-wave-clock.jpg)
+![Wave Clock](https://cloud.githubusercontent.com/assets/252053/3864376/754381ce-1f5b-11e4-89b5-ebbc05df58be.jpg)
 
 [View Source](19_wave_clock.clj)
 (p79 - Listing 4.6)
 
 ## 20. 2D Noise Grid
-![2D Noise Grid](https://github.com/downloads/quil/quil/gen-art-2d-noise-grid.png)
+![2D Noise Grid](https://cloud.githubusercontent.com/assets/252053/3864382/90fc3dde-1f5b-11e4-8c05-e0817dc115c6.png)
 
 [View Source](20_noise_grid.clj)
 (p84 - Listing 5.1)
 
 ## 21. Squared 2D Noise Grid
-![Squared 2D Noise Grid](https://github.com/downloads/quil/quil/gen-art-squared-2D-noise-grid.png)
+![Squared 2D Noise Grid](https://cloud.githubusercontent.com/assets/252053/3864387/a0fa3f9c-1f5b-11e4-84ad-25476acb8177.png)
 
 [View Source](21_squared_noise_grid.clj)
 (p86 - Listing 5.2)
 
 ## 22. Rotating Lines 2D Noise Grid
-![Rotating Lines 2D Noise Grid](https://github.com/downloads/quil/quil/gen-art-rotating-lines-2D-noise-grid.png)
+![Rotating Lines 2D Noise Grid](https://cloud.githubusercontent.com/assets/252053/3864392/b3471d96-1f5b-11e4-998c-eda85ddce415.png)
 
 [View Source](22_rotating_lines_noise_grid.clj)
 (p86 - Section 5.12 - Figure 5.3)
 
 ## 23. Fluffy Clouds 2D Noise Grid
-![Fluffy Clouds 2D Noise Grid](https://github.com/downloads/quil/quil/gen-art-fluffy-clouds-2D-noise-grid.png)
+![Fluffy Clouds 2D Noise Grid](https://cloud.githubusercontent.com/assets/252053/3864394/c5f665a0-1f5b-11e4-894c-2be1730ff41b.png)
 
 [View Source](23_fluffy_clouds_noise_grid.clj)
 (p88 - Section 5.12 - Figure 5.4)
 
 ## 24. Animated Fluffly Clouds
-![Animated Fluffly Clouds](https://github.com/downloads/quil/quil/gen-art-animated-fluffy-clouds.png)
+![Animated Fluffly Clouds](https://cloud.githubusercontent.com/assets/252053/3864397/d6a9f1be-1f5b-11e4-8497-913e3a22f96f.png)
 
 [View Source](24_animated_fluffy_clouds.clj)
 (p91 - Listing 5.3)
 
 ## 25. Animated Rotated Lines
-![Animated Rotated Lines](https://github.com/downloads/quil/quil/gen-art-animated-rotated-lines.png)
+![Animated Rotated Lines](https://cloud.githubusercontent.com/assets/252053/3864402/ea276b90-1f5b-11e4-9352-e1c756fd0038.png)
 
 [View Source](25_animated_rotated_lines.clj)
 (p91 - Listing 5.4)
 Try setting the step-size to 15.
 
 ## 26. 3D Sphere
-![3D Sphere](https://github.com/downloads/quil/quil/gen-art-sphere.png)
+![3D Sphere](https://cloud.githubusercontent.com/assets/252053/3864406/0304ce3c-1f5c-11e4-8f17-d7a770336d4f.png)
 
 [View Source](26_sphere.clj)
 (p94 - Section 5..1 - Figure 5.5)
 
 ## 27. Noise from a 3D Perspective
-![Noise from a 3D Perspective](https://github.com/downloads/quil/quil/gen-art-noise-perspective.png)
+![Noise from a 3D Perspective](https://cloud.githubusercontent.com/assets/252053/3864412/1236edcc-1f5c-11e4-9ee7-e62aafa5c941.png)
 
 [View Source](27_noise_perspective.clj)
 (p95 - Listing 5.5)
 
 ## 28. A Cube of 3D Noise
-![A Cube of 3D Noise](https://github.com/downloads/quil/quil/gen-art-cube-of-noise.png)
+![A Cube of 3D Noise](https://cloud.githubusercontent.com/assets/252053/3864419/28667dba-1f5c-11e4-93df-d694db5e28ce.png)
 
 [View Source](28_cloud_cube.clj)
 (p97 - Listing 5.6)
 
 ## 29. Spiral Sphere
-![Spiral Sphere](https://github.com/downloads/quil/quil/gen-art-spiral-sphere.png)
+![Spiral Sphere](https://cloud.githubusercontent.com/assets/252053/3864420/36ce060c-1f5c-11e4-9a3f-0dc0df32ebcc.png)
 
 [View Source](29_spiral_sphere.clj)
 (p100 - Listing 5.7)
 
 ## 30. Random Clicked Circles
-![Random Clicked Circles](https://github.com/downloads/quil/quil/gen-art-random-clicked-circles.png)
+![Random Clicked Circles](https://cloud.githubusercontent.com/assets/252053/3864421/46e3cac2-1f5c-11e4-92ae-7884c0de363a.png)
 
 [View Source](30_random_clicked_circles.clj)
 (p113 - Listing 6.1)
 
 ## 31. OO Circles
-![OO Circles](https://github.com/downloads/quil/quil/gen-art-oo-circles.png)
+![OO Circles](https://cloud.githubusercontent.com/assets/252053/3864422/57966cbc-1f5c-11e4-8bec-b5ce590f4bf5.png)
 
 [View Source](31_oo_circles.clj)
 (p117 - Listing 6.4)
