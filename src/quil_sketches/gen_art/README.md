@@ -3,91 +3,91 @@
 Key examples from the book Generative Art by Matt Pearson translated from Processing into Quil, reprinted with kind permission from the author.
 
 ## 1. Cross with Circle
-![Cross with Circle](http://cloud.github.com/downloads/quil/quil/gen-art-cross-with-circle.png)
+![Cross with Circle](http://github.com/downloads/quil/quil/gen-art-cross-with-circle.png)
 
 [View Source](01_cross_with_circle.clj)
 (p20 - Section 2.2.1)
 
 ## 2. Growing Circle
-![Growing Circle](http://cloud.github.com/downloads/quil/quil/gen-art-growing-circle.png)
+![Growing Circle](http://github.com/downloads/quil/quil/gen-art-growing-circle.png)
 
 [View Source](02_growing_circle.clj)
 (p28 - Listing 2.1)
 
 ## 3. Concentric circles drawn using traces
-![Concentric Circles](http://cloud.github.com/downloads/quil/quil/gen-art-concentric-circles.png)
+![Concentric Circles](http://github.com/downloads/quil/quil/gen-art-concentric-circles.png)
 
 [View Source](03_concentric_circles.clj)
 (p37 - Listing 2.3)
 
 ## 4. Fading Horizontal Lines
-![Fading Horizontal Lines](http://cloud.github.com/downloads/quil/quil/gen-art-fading-horizontal-lines.png)
+![Fading Horizontal Lines](http://github.com/downloads/quil/quil/gen-art-fading-horizontal-lines.png)
 
 [View Source](04_fading_horizontal_lines.clj)
 (p39 - Section 2.4.3)
 
 ## 5. Random Scribble
-![Random Scribble](http://cloud.github.com/downloads/quil/quil/gen-art-random-scribble.png)
+![Random Scribble](http://github.com/downloads/quil/quil/gen-art-random-scribble.png)
 
 [View Source](05_random_scribble.clj)
 (p55 - Section 3.2)
 
 ## 6. Random Walk Scribble
-![Random Walk Scribble](http://cloud.github.com/downloads/quil/quil/gen-art-rand-walk-scribble.jpg)
+![Random Walk Scribble](http://github.com/downloads/quil/quil/gen-art-rand-walk-scribble.jpg)
 
 [View Source](06_rand_walk_scribble.clj)
 (p56 - Section 3.2(b))
 
 ## 7. Perlin Noise Scribble
-![Random Walk Scribble](http://cloud.github.com/downloads/quil/quil/gen-art-perlin-noise-scribble.jpg)
+![Random Walk Scribble](http://github.com/downloads/quil/quil/gen-art-perlin-noise-scribble.jpg)
 
 [View Source](07_perlin_noise_scribble.clj)
 (p59 - Listing 3.1)
 
 ## 8. Sine Wave
-![Sine Wave](http://cloud.github.com/downloads/quil/quil/gen-art-sine-wave.jpg)
+![Sine Wave](http://github.com/downloads/quil/quil/gen-art-sine-wave.jpg)
 
 [View Source](08_sine_wave.clj)
 (p60 - Listing 3.2)
 
 ## 9. Sine Wave with Noise
-![Sine Wave with Noise](http://cloud.github.com/downloads/quil/quil/gen-art-sine-wave-with-noise.jpg)
+![Sine Wave with Noise](http://github.com/downloads/quil/quil/gen-art-sine-wave-with-noise.jpg)
 
 [View Source](09_sine_wave_with_noise.clj)
 (p63 - Section 3.3.2)
 
 ## 10. Custom Random Function
-![Custom Random Function](http://cloud.github.com/downloads/quil/quil/gen-art-custom-random-function.jpg)
+![Custom Random Function](http://github.com/downloads/quil/quil/gen-art-custom-random-function.jpg)
 
 [View Source](10_custom_rand.clj)
 (p63 - Section 3.3.3)
 
 ## 11. Dotted Circle
-![Dotted Circle](http://cloud.github.com/downloads/quil/quil/gen-art-dotted-circle.jpg)
+![Dotted Circle](http://github.com/downloads/quil/quil/gen-art-dotted-circle.jpg)
 
 [View Source](11_dotted_circle.clj)
 (p68 - Listing 4.1)
 
 ## 12. Spiral
-![Spiral](http://cloud.github.com/downloads/quil/quil/gen-art-spiral.jpg)
+![Spiral](http://github.com/downloads/quil/quil/gen-art-spiral.jpg)
 
 [View Source](12_spiral.clj)
 (p69 - Listing 4.2)
 
 ## 13. Noisy Spiral
-![Noisy Spiral](http://cloud.github.com/downloads/quil/quil/gen-art-noisy-spiral.jpg)
+![Noisy Spiral](http://github.com/downloads/quil/quil/gen-art-noisy-spiral.jpg)
 
 [View Source](13_noisy_spiral.clj)
 (p69 - Listing 4.3)
 
 ## 14. 100 Noisy Spirals
-![100 Noisy Spirals](http://cloud.github.com/downloads/quil/quil/gen-art-hundred-noisy-spirals.jpg)
+![100 Noisy Spirals](http://github.com/downloads/quil/quil/gen-art-hundred-noisy-spirals.jpg)
 
 [View Source](14_hundred_noisy_spirals.clj)
 (p71 - Listing 4.4)
 
 ## 15. Custom Noise Circle
-![Custom Noise Circle](http://cloud.github.com/downloads/quil/quil/gen-art-custom-noise-circle.jpg)
+![Custom Noise Circle](http://github.com/downloads/quil/quil/gen-art-custom-noise-circle.jpg)
 
 [View Source](15_custom_noise_circle.clj)
 (p73 - Listing 4.5)
