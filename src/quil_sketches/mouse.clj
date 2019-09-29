@@ -8,11 +8,11 @@
 
 (defn draw
   []
-  (background-float 125)
+  (background 125)
   (stroke-weight 20)
-  (stroke-float 10)
-  (let [[x y] @(state :mouse-position)]
-    (point x y)))
+  (with-stroke 10
+    (let [[x y] @(state :mouse-position)]
+      (point x y))))
 
 (defn mouse-moved []
   (let [x (mouse-x)  y (mouse-y)]
