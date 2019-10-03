@@ -30,22 +30,21 @@
 
 (defn draw
   []
-  (let [blob-size (* 2 (params :blob-radius))
-        [bx by] @blob-location]
+  (let [blob-size (* 2 (params :blob-radius))]
+       [bx by] @blob-location
     (background (params :background-colour))
     (fill (params :blob-colour))
     (rect bx by blob-size blob-size)
     (text "Use WASD and arrow keys to move" 10 390)))
 
-(def valid-keys {
-                  KeyEvent/VK_UP :up
-                  KeyEvent/VK_DOWN :down
-                  KeyEvent/VK_LEFT :left
-                  KeyEvent/VK_RIGHT :right
-                  \w :up
-                  \s :down
-                  \a :left
-                  \d :right})
+(def valid-keys {KeyEvent/VK_UP :up
+                 KeyEvent/VK_DOWN :down
+                 KeyEvent/VK_LEFT :left
+                 KeyEvent/VK_RIGHT :right
+                 \w :up
+                 \s :down
+                 \a :left
+                 \d :right})
 
 (def moves {:up [0 -10]
             :down [0 10]
