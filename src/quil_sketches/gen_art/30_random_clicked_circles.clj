@@ -34,11 +34,11 @@
 ;;   }
 ;; }
 
-(def num 10)
+(def num-circles 10)
 
 (defn draw-circles []
   (dorun
-   (for [i (range 0 num)]
+   (for [i (range 0 num-circles)]
      (let [x      (random (width))
            y      (random (height))
            radius (+ (random 100) 10)]

@@ -3,12 +3,12 @@
             [quil.helpers.drawing :refer [line-join-points]]
             [quil.helpers.seqs :refer [range-incl steps]]))
 
-;; Example of using graphics via create-graphics and with-graphics.
-;; On each iteration 1 spiral will be drawn on graphics and then we tile all screen using this graphics.
-;; Graphics created in setup funcion and stored in state.
-;; Spiral is drawn by draw-spiral function that uses standard draw functions.
-;; If draw-spiral function invoked inside 'with-graphics' macro then spiral will be drawn on given graphics,
-;; otherwise spiral is drawon on applet.
+;; Example of using graphics via create-graphics and with-graphics. On each
+;; iteration 1 spiral will be drawn on graphics and then we tile all screen
+;; using this graphics. Graphics created in setup funcion and stored in state.
+;; Spiral is drawn by draw-spiral function that uses standard draw functions. If
+;; draw-spiral function invoked inside 'with-graphics' macro then spiral will be
+;; drawn on given graphics, otherwise spiral is drawon on applet.
 
 (def spiral-size 100)
 
@@ -17,7 +17,8 @@
 
 
 (defn draw-spiral
-  "Draws spiral on current surface: on applet or on graphics if inside with-graphics macro."
+  "Draws spiral on current surface: on applet or on graphics if inside
+  with-graphics macro."
   []
   (with-translation [cent-x cent-y]
     (with-rotation [(/ (frame-count) -5 Math/PI)]
@@ -53,9 +54,9 @@
       (image gr x y))))
 
 (defsketch graphics
-	  :title "Graphics"
-	  :setup setup
-          :draw draw
-          :size [500 500])
+  :title "Graphics"
+  :setup setup
+  :draw draw
+  :size [500 500])
 
 (defn -main [& args])
