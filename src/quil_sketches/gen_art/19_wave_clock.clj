@@ -1,5 +1,5 @@
 (ns quil-sketches.gen-art.19-wave-clock
-  (:require [quil.core :refer :all]
+  (:require [quil.core :as q]
             [quil.helpers.seqs :refer [cycle-between seq->stream steps]]
             [quil.helpers.calc :refer [mul-add]]))
 
@@ -52,28 +52,28 @@
 
 (defn mk-lines-stream
   []
-  (let [half-width   (/ (width) 2)
-        half-height  (/ (height) 2)
-        radius-steps (steps (random 10) 0.005)
-        angle-steps  (steps (random 10) 0.005)
-        x-steps      (steps (random 10) 0.01)
-        x-noises     (map noise x-steps)
-        y-steps      (steps (random 10) 0.01)
-        y-noises     (map noise y-steps)
-        angle-noises (map noise angle-steps)
+  (let [half-width   (/ (q/width) 2)
+        half-height  (/ (q/height) 2)
+        radius-steps (steps (q/random 10) 0.005)
+        angle-steps  (steps (q/random 10) 0.005)
+        x-steps      (steps (q/random 10) 0.01)
+        x-noises     (map q/noise x-steps)
+        y-steps      (steps (q/random 10) 0.01)
+        y-noises     (map q/noise y-steps)
+        angle-noises (map q/noise angle-steps)
         angle-noises (mul-add angle-noises 6 -3)
-        angles       (steps (- (/ PI 2)) angle-noises)
+        angles       (steps (- (/ q/PI 2)) angle-noises)
         angles       (map #(mod % 360) angles)
-        rads         (map radians angles)
+        rads         (map q/radians angles)
         center-xs    (mul-add x-noises 100 (- half-width 50))
         center-ys    (mul-add y-noises 100 (- half-height 50))
-        radii        (map noise radius-steps)
+        radii        (map q/noise radius-steps)
         radii        (mul-add radii 550 1)
-        cos-rads     (map cos rads)
-        sin-rads     (map sin rads)
-        opp-rads     (map #(+ PI %) rads)
-        cos-opp-rads (map cos opp-rads)
-        sin-opp-rads (map sin opp-rads)
+        cos-rads     (map q/cos rads)
+        sin-rads     (map q/sin rads)
+        opp-rads     (map #(+ q/PI %) rads)
+        cos-opp-rads (map q/cos opp-rads)
+        sin-opp-rads (map q/sin opp-rads)
         x1s          (mul-add cos-rads radii center-xs)
         y1s          (mul-add sin-rads radii center-ys)
         x2s          (mul-add cos-opp-rads radii center-xs)
@@ -87,23 +87,23 @@
     (seq->stream stroke-cols)))
 
 (defn setup []
-  (smooth)
-  (frame-rate 30)
-  (background 255)
-  (no-fill)
-  (stroke-weight 3)
-  (set-state! :lines-str (mk-lines-stream)
-              :cols-str (mk-cols-stream)))
+  (q/smooth)
+  (q/frame-rate 30)
+  (q/background 255)
+  (q/no-fill)
+  (q/stroke-weight 3)
+  (q/set-state! :lines-str (mk-lines-stream)
+                :cols-str (mk-cols-stream)))
 
 (defn draw []
-  (let [lines-str (state :lines-str)
-        cols-str  (state :cols-str)
+  (let [lines-str (q/state :lines-str)
+        cols-str  (q/state :cols-str)
         line-args (lines-str)
         col       (cols-str)]
-    (stroke col 60)
-    (apply line line-args)))
+    (q/stroke col 60)
+    (apply q/line line-args)))
 
-(defsketch gen-art-19
+(q/defsketch gen-art-19
   :title "Wave Clock"
   :setup setup
   :draw draw
