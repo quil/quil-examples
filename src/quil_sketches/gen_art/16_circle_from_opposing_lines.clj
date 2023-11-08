@@ -1,6 +1,5 @@
 (ns quil-sketches.gen-art.16-circle-from-opposing-lines
-  (:require [quil.core :refer :all]
-            [quil.helpers.drawing :refer [line-join-points]]
+  (:require [quil.core :as q]
             [quil.helpers.seqs :refer [range-incl]]
             [quil.helpers.calc :refer [mul-add]]))
 
@@ -32,25 +31,25 @@
 ;; }
 
 (defn setup []
-  (background 255)
-  (stroke-weight 0.5)
-  (smooth)
-  (no-fill)
-  (stroke 20 50 70)
+  (q/background 255)
+  (q/stroke-weight 0.5)
+  (q/smooth)
+  (q/no-fill)
+  (q/stroke 20 50 70)
   (let [radius   130
         cent-x   250
         cent-y   150
         angles   (range-incl 0 360)
-        rads     (map radians angles)
-        opp-rads (map + rads (repeat PI))
-        x1s      (map #(mul-add (cos %) radius cent-x) rads)
-        y1s      (map #(mul-add (sin %) radius cent-y) rads)
-        x2s      (map #(mul-add (cos %) radius cent-x) opp-rads)
-        y2s      (map #(mul-add (sin %) radius cent-y) opp-rads)]
-    (doall (map line x1s y1s x2s y2s))))
+        rads     (map q/radians angles)
+        opp-rads (map + rads (repeat q/PI))
+        x1s      (map #(mul-add (q/cos %) radius cent-x) rads)
+        y1s      (map #(mul-add (q/sin %) radius cent-y) rads)
+        x2s      (map #(mul-add (q/cos %) radius cent-x) opp-rads)
+        y2s      (map #(mul-add (q/sin %) radius cent-y) opp-rads)]
+    (doall (map q/line x1s y1s x2s y2s))))
 
 
-(defsketch gen-art-16
+(q/defsketch gen-art-16
   :title "Circle from Opposing Lines"
   :setup setup
   :size [500 300])
