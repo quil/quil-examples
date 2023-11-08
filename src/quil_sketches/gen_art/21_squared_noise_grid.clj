@@ -1,7 +1,8 @@
-(ns quil-sketches.gen-art.22-squared-noise-grid
-  (:require [quil.core :refer :all]
-            [quil.helpers.seqs :refer [range-incl]]
-            [quil.helpers.calc :refer [mul-add]]))
+(ns quil-sketches.gen-art.21-squared-noise-grid
+  (:require
+   [quil.core :as q]
+   [quil.helpers.calc :refer [mul-add]]
+   [quil.helpers.seqs :refer [range-incl]]))
 
 ;; Example 21 - Squared 2D Noise Grid
 ;; Taken from Listing 5.2, p86
@@ -33,24 +34,23 @@
 (defn draw-point
   [x y noise-factor]
   (let [len (* 10 noise-factor)]
-    (rect x y len len)))
+    (q/rect x y len len)))
 
 (defn draw-squares
   [x-start y-start]
   (dorun
-   (for [y (range-incl 0 (height) 5)
-         x (range-incl 0 (width) 5)]
+   (for [y (range-incl 0 (q/height) 5)
+         x (range-incl 0 (q/width) 5)]
      (let [x-noise (mul-add x 0.01 x-start)
-           y-noise (mul-add y 0.01 y-start)
-           alph    (* 255 (noise x-noise y-noise))]
-       (draw-point x y (noise x-noise y-noise))))))
+           y-noise (mul-add y 0.01 y-start)]
+       (draw-point x y (q/noise x-noise y-noise))))))
 
 (defn setup []
-  (smooth)
-  (background 255)
-  (draw-squares (random 10) (random 10)))
+  (q/smooth)
+  (q/background 255)
+  (draw-squares (q/random 10) (q/random 10)))
 
-(defsketch gen-art-21
+(q/defsketch gen-art-21
   :title "Squared 2D Noise Grid"
   :setup setup
   :size [300 300])
