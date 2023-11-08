@@ -9,9 +9,9 @@
 (defn draw
   "Example usage of with-translation and with-rotation."
   []
-  (background-float 125)
-  (stroke-float 10)
-  (fill-float (rand-int 125) (rand-int 125) (rand-int 125))
+  (background 125)
+  (stroke 10)
+  (fill (rand-int 125) (rand-int 125) (rand-int 125))
   (with-translation [(/ 200 2) (/ 200 2)]
     (with-rotation [QUARTER-PI]
       (begin-shape)
