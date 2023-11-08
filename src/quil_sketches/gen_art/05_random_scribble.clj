@@ -1,5 +1,5 @@
 (ns quil-sketches.gen-art.05-random-scribble
-  (:require [quil.core :refer :all]
+  (:require [quil.core :as q]
             [quil.helpers.seqs :refer [range-incl]]
             [quil.helpers.drawing :refer [line-join-points]]))
 
@@ -33,26 +33,26 @@
 
 (defn rand-y
   [border-y]
-  (+ border-y (rand (- (height) (* 2 border-y)))))
+  (+ border-y (rand (- (q/height) (* 2 border-y)))))
 
 (defn setup []
-  (background 255)
-  (stroke-weight 5)
-  (smooth)
-  (stroke 0 30)
-  (line 20 50 480 50)
+  (q/background 255)
+  (q/stroke-weight 5)
+  (q/smooth)
+  (q/stroke 0 30)
+  (q/line 20 50 480 50)
 
-  (stroke 20 50 70)
+  (q/stroke 20 50 70)
   (let [step      10
         border-x  20
         border-y  10
-        xs        (range-incl border-x (- (width) border-x) step)
+        xs        (range-incl border-x (- (q/width) border-x) step)
         ys        (repeatedly #(rand-y border-y))
         line-args (line-join-points xs ys)]
-    (dorun (map #(apply line %) line-args))))
+    (dorun (map #(apply q/line %) line-args))))
 
 
-(defsketch example-5
+(q/defsketch example-5
   :title "Random Scribble"
   :setup setup
   :size [500 100])
