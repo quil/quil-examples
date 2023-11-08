@@ -1,24 +1,25 @@
 (ns quil-sketches.mouse
-  (:require [quil.core :refer :all]))
+  (:require [quil.core :as q]))
 
 (defn setup []
-  (smooth)
-  (no-stroke)
-  (set-state! :mouse-position (atom [0 0])))
+  (q/smooth)
+  (q/no-stroke)
+  (q/set-state! :mouse-position (atom [0 0])))
 
 (defn draw
   []
-  (background 125)
-  (stroke-weight 20)
-  (with-stroke 10
-    (let [[x y] @(state :mouse-position)]
-      (point x y))))
+  (q/background 125)
+  (q/stroke-weight 20)
+  (q/with-stroke 10
+    (let [[x y] @(q/state :mouse-position)]
+      (q/point x y))))
 
 (defn mouse-moved []
-  (let [x (mouse-x)  y (mouse-y)]
-    (reset! (state :mouse-position) [x y])))
+  (let [x (q/mouse-x)
+        y (q/mouse-y)]
+    (reset! (q/state :mouse-position) [x y])))
 
-(defsketch mouse-example
+(q/defsketch mouse-example
   :title "Mouse example."
   :size [200 200]
   :setup setup
