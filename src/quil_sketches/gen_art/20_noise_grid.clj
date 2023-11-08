@@ -36,7 +36,7 @@
        (let [x-noise (mul-add x 0.01 x-start)
              y-noise (mul-add y 0.01 y-start)
              alph    (* 255 (noise x-noise y-noise))]
-         (stroke-int 0 alph)
+         (stroke 0 alph)
          (line x y (inc x) (inc y)))))))
 
 (defsketch gen-art-20
