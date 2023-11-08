@@ -3,4 +3,4 @@
   :url "https://github.com/quil/quil-examples"
 
   :dependencies [[org.clojure/clojure "1.11.1"]
-                 [quil "4.3.1320-e5ff83f-SNAPSHOT"]])
+                 [quil "4.3.1323"]])
