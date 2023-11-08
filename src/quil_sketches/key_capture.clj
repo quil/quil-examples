@@ -1,32 +1,34 @@
 (ns quil-sketches.key_capture
-  (:require [quil.core :refer :all]))
+  (:require [quil.core :as q]))
 
 (def current-text-size (atom 20))
 
-(def params {:big-text-size 30
-	:background-color 25
-	:foreground-color 200})
+(def params
+  {:big-text-size 30
+	 :background-color 25
+	 :foreground-color 200})
 
 (defn setup []
-  (smooth)
-  (no-stroke)
-  (set-state! :message (atom "Click on screen and type a key")))
+  (q/smooth)
+  (q/no-stroke)
+  (q/set-state! :message (atom "Click on screen and type a key")))
 
 (defn draw
   []
-  (background-float (params :background-color))
-  (stroke-weight 20)
-  (stroke-float 10)
-  (fill (params :foreground-color))
-  (text-size @current-text-size)
-  (text @(state :message) 20 60))
+  (q/background (params :background-color))
+  (q/stroke-weight 20)
+  (q/stroke 10)
+  (q/fill (params :foreground-color))
+  (q/text-size @current-text-size)
+  (q/text @(q/state :message) 20 60))
 
 (defn key-press []
 	(let [big-text-size (params :big-text-size)]
-	(if (< @current-text-size big-text-size) (reset! current-text-size big-text-size))
-	(reset! (state :message) (str "Key pressed: " (raw-key)))))
+	  (when (< @current-text-size big-text-size)
+      (reset! current-text-size big-text-size))
+	  (reset! (q/state :message) (str "Key pressed: " (q/raw-key)))))
 
-(defsketch key-listener
+(q/defsketch key-listener
   :title "Keyboard listener example"
   :size [400 100]
   :setup setup
