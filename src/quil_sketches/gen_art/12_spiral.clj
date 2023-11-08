@@ -1,4 +1,4 @@
-(ns quil-sketches.gen-art.12-aspiral
+(ns quil-sketches.gen-art.12-spiral
   (:require [quil.core :as q]
             [quil.helpers.drawing :refer [line-join-points]]
             [quil.helpers.seqs :refer [range-incl steps]]))

@@ -1,4 +1,4 @@
-(ns quil-sketches.gen-art.31-oo_circles
+(ns quil-sketches.gen-art.31-oo-circles
   (:require [quil.core :as q]))
 
 ;; Example 31 - OO Circles
