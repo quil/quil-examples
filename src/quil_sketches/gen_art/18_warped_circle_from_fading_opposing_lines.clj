@@ -1,5 +1,5 @@
 (ns quil-sketches.gen-art.18-warped-circle-from-fading-opposing-lines
-  (:require [quil.core :refer :all]
+  (:require [quil.core :as q]
             [quil.helpers.seqs :refer [range-incl steps]]
             [quil.helpers.calc :refer [mul-add]]))
 
@@ -39,29 +39,29 @@
 ;; }
 
 (defn setup []
-  (background 255)
-  (stroke-weight 0.5)
-  (smooth)
-  (stroke 20 50 70)
+  (q/background 255)
+  (q/stroke-weight 0.5)
+  (q/smooth)
+  (q/stroke 20 50 70)
   (let [cent-x    250
         cent-y    150
         angles    (range-incl 0 360)
-        rads      (map radians angles)
-        opp-rads  (map + rads (repeat PI))
+        rads      (map q/radians angles)
+        opp-rads  (map + rads (repeat q/PI))
         colours   (cycle (range-incl 255 0 -1))
-        rad-noise (steps (random 10) 0.005)
-        radii     (map noise rad-noise)
+        rad-noise (steps (q/random 10) 0.005)
+        radii     (map q/noise rad-noise)
         radii     (mul-add radii 400 1)
-        x1s       (map (fn [radius rad] (mul-add (cos rad) radius cent-x)) radii rads)
-        y1s       (map (fn [radius rad] (mul-add (sin rad) radius cent-y)) radii rads)
-        x2s       (map (fn [radius rad] (mul-add (cos rad) radius cent-x)) radii opp-rads)
-        y2s       (map (fn [radius rad] (mul-add (sin rad) radius cent-y)) radii opp-rads)]
+        x1s       (map (fn [radius rad] (mul-add (q/cos rad) radius cent-x)) radii rads)
+        y1s       (map (fn [radius rad] (mul-add (q/sin rad) radius cent-y)) radii rads)
+        x2s       (map (fn [radius rad] (mul-add (q/cos rad) radius cent-x)) radii opp-rads)
+        y2s       (map (fn [radius rad] (mul-add (q/sin rad) radius cent-y)) radii opp-rads)]
     (doall (map (fn [x1 y1 x2 y2 col]
-                  (stroke col)
-                  (line x1 y1 x2 y2))
+                  (q/stroke col)
+                  (q/line x1 y1 x2 y2))
                 x1s y1s x2s y2s colours))))
 
-(defsketch gen-art-18
+(q/defsketch gen-art-18
   :title "Warped Circle from Fading Opposing Lines"
   :setup setup
   :size [500 300])
