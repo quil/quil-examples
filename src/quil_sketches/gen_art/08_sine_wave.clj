@@ -1,5 +1,5 @@
 (ns quil-sketches.gen-art.08-sine-save
-  (:require [quil.core :refer :all]
+  (:require [quil.core :as q]
             [quil.helpers.drawing :refer [line-join-points]]
             [quil.helpers.seqs :refer [range-incl]]
             [quil.helpers.calc :refer [mul-add]]))
@@ -35,21 +35,21 @@
 
 
 (defn setup []
-  (background 255)
-  (stroke-weight 5)
-  (smooth)
-  (stroke 0 30)
-  (line 20 50 480 50)
-  (stroke 20 50 70)
+  (q/background 255)
+  (q/stroke-weight 5)
+  (q/smooth)
+  (q/stroke 0 30)
+  (q/line 20 50 480 50)
+  (q/stroke 20 50 70)
 
   (let [xs        (range-incl 20 480 1)
-        rads      (map radians (range))
-        ys        (map sin rads)
+        rads      (map q/radians (range))
+        ys        (map q/sin rads)
         scaled-ys (mul-add ys 40 50)
         line-args (line-join-points xs scaled-ys)]
-    (dorun (map #(apply line %) line-args))))
+    (dorun (map #(apply q/line %) line-args))))
 
-(defsketch gen-art-8
+(q/defsketch gen-art-8
   :title "Sine Wave"
   :setup setup
   :size [500 100])
