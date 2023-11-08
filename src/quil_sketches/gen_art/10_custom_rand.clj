@@ -1,5 +1,5 @@
 (ns quil-sketches.gen-art.10-custom-rand
-  (:require [quil.core :refer :all]
+  (:require [quil.core :as q]
             [quil.helpers.drawing :refer [line-join-points]]
             [quil.helpers.seqs :refer [range-incl]]
             [quil.helpers.calc :refer [mul-add]]))
@@ -39,24 +39,24 @@
 
 (defn custom-rand
   []
-  (- 1 (pow (random 1) 5)))
+  (- 1 (q/pow (q/random 1) 5)))
 
 (defn setup []
-  (background 255)
-  (stroke-weight 5)
-  (smooth)
-  (stroke 0 30)
-  (line 20 50 480 50)
-  (stroke 20 50 70)
+  (q/background 255)
+  (q/stroke-weight 5)
+  (q/smooth)
+  (q/stroke 0 30)
+  (q/line 20 50 480 50)
+  (q/stroke 20 50 70)
 
   (let [xs        (range-incl 20 480 5)
         ys        (repeatedly custom-rand)
         scaled-ys (mul-add ys 60 20)
         line-args (line-join-points xs scaled-ys)]
 
-    (dorun (map #(apply line %) line-args))))
+    (dorun (map #(apply q/line %) line-args))))
 
-(defsketch gen-art-10
+(q/defsketch gen-art-10
   :title "Custom Random Function"
   :setup setup
   :size [500 100])
