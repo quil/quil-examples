@@ -1,7 +1,8 @@
 (ns quil-sketches.gen-art.28-cloud-cube
-  (:require [quil.core :refer :all]
-            [quil.helpers.seqs :refer [indexed-range-incl]]
-            [quil.helpers.calc :refer [mul-add]]))
+  (:require
+   [quil.core :as q]
+   [quil.helpers.calc :refer [mul-add]]
+   [quil.helpers.seqs :refer [indexed-range-incl]]))
 
 ;; Example 28 - A Cube of 3D Noise
 ;; Taken from Listing 5.6, p97
@@ -65,42 +66,42 @@
 
 (defn draw-point
   [x y z noise-factor]
-  (push-matrix)
-  (translate x y z)
+  (q/push-matrix)
+  (q/translate x y z)
   (let [grey (* noise-factor 255)]
-    (fill grey 10)
-    (box spacing spacing spacing)
-    (pop-matrix)))
+    (q/fill grey 10)
+    (q/box spacing spacing spacing)
+    (q/pop-matrix)))
 
 (defn draw []
-  (background 0)
+  (q/background 0)
 
-  (let [fc          (frame-count)
-        x-start     (state :x-start)
-        y-start     (state :y-start)
-        z-start     (state :z-start)
+  (let [fc          (q/frame-count)
+        x-start     (q/state :x-start)
+        y-start     (q/state :y-start)
+        z-start     (q/state :z-start)
         rotate-val  (* fc 0.1)
         noise-shift (* fc 0.01)]
 
-    (translate 150 20 -150)
-    (rotate-z rotate-val)
-    (rotate-y rotate-val)
+    (q/translate 150 20 -150)
+    (q/rotate-z rotate-val)
+    (q/rotate-y rotate-val)
     (doseq [[x-idx z] (indexed-range-incl 0 side-length spacing)
             [y-idx y] (indexed-range-incl 0 side-length spacing)
             [z-idx x] (indexed-range-incl 0 side-length spacing)]
       (let [x-noise (mul-add x-idx 0.1 (+ noise-shift x-start))
             y-noise (mul-add y-idx 0.1 (+ noise-shift y-start))
             z-noise (mul-add z-idx 0.1 (+ noise-shift z-start))]
-        (draw-point x y z (noise x-noise y-noise z-noise))))))
+        (draw-point x y z (q/noise x-noise y-noise z-noise))))))
 
 (defn setup []
-  (background 0)
-  (no-stroke)
-  (set-state! :x-start (random 10)
-              :y-start (random 10)
-              :z-start (random 10)))
+  (q/background 0)
+  (q/no-stroke)
+  (q/set-state! :x-start (q/random 10)
+                :y-start (q/random 10)
+                :z-start (q/random 10)))
 
-(defsketch gen-art-28
+(q/defsketch gen-art-28
   :title "A Cube of 3D Noise"
   :setup setup
   :draw draw

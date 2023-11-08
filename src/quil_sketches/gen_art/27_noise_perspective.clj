@@ -1,7 +1,8 @@
 (ns quil-sketches.gen-art.27-noise-perspective
-  (:require [quil.core :refer :all]
-            [quil.helpers.seqs :refer [indexed-range-incl seq->stream steps]]
-            [quil.helpers.calc :refer [mul-add]]))
+  (:require
+   [quil.core :as q]
+   [quil.helpers.calc :refer [mul-add]]
+   [quil.helpers.seqs :refer [indexed-range-incl seq->stream steps]]))
 
 ;; Example 27 - 2D Noise from a 3D Perspectivea
 ;; Taken from Listing 5.5, p95
@@ -52,36 +53,36 @@
 
 (defn draw-point
   [x y noise-factor]
-  (push-matrix)
-  (translate x (- 250 y) (* -1 y))
+  (q/push-matrix)
+  (q/translate x (- 250 y) (* -1 y))
   (let [sphere-size (* noise-factor 35)
         grey        (mul-add noise-factor 120 150)
         alph        grey]
-    (fill grey alph)
-    (sphere sphere-size)
-    (pop-matrix)))
+    (q/fill grey alph)
+    (q/sphere sphere-size)
+    (q/pop-matrix)))
 
 (defn draw []
-  (background 0)
-  (let [[x-shift y-shift] ((state :shifts))]
-    (doseq [[x-idx x] (indexed-range-incl 0 (width) 5)
-            [y-idx y] (indexed-range-incl 0 (height) 5)]
+  (q/background 0)
+  (let [[x-shift y-shift] ((q/state :shifts))]
+    (doseq [[x-idx x] (indexed-range-incl 0 (q/width) 5)
+            [y-idx y] (indexed-range-incl 0 (q/height) 5)]
       (let [y-noise (mul-add y-idx 0.1 y-shift)
             x-noise (mul-add x-idx 0.1 x-shift)]
-        (draw-point x y (noise x-noise y-noise))))))
+        (draw-point x y (q/noise x-noise y-noise))))))
 
 (defn setup []
-  (smooth)
-  (background 0)
+  (q/smooth)
+  (q/background 0)
 
-  (sphere-detail 8)
-  (no-stroke)
-  (let [x-shifts (steps (random 10) 0.01)
-        y-shifts (steps (random 10) 0.01)
+  (q/sphere-detail 8)
+  (q/no-stroke)
+  (let [x-shifts (steps (q/random 10) 0.01)
+        y-shifts (steps (q/random 10) 0.01)
         shifts   (map list x-shifts y-shifts)]
-    (set-state! :shifts (seq->stream shifts))))
+    (q/set-state! :shifts (seq->stream shifts))))
 
-(defsketch gen-art-27
+(q/defsketch gen-art-27
   :title "2D Noise from a 3D Perspective"
   :setup setup
   :draw draw

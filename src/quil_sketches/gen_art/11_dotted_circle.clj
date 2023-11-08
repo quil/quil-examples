@@ -1,6 +1,5 @@
 (ns quil-sketches.gen-art.11-dotted-circle
-  (:require [quil.core :refer :all]
-            [quil.helpers.drawing :refer [line-join-points]]
+  (:require [quil.core :as q]
             [quil.helpers.seqs :refer [range-incl]]))
 
 ;; Example 11 - Dotted Circle
@@ -30,22 +29,22 @@
 ;; }
 
 (defn setup []
-  (background 255)
-  (stroke-weight 5)
-  (smooth)
+  (q/background 255)
+  (q/stroke-weight 5)
+  (q/smooth)
   (let [radius    100
         cent-x    250
         cent-y    150
-        rads      (map radians (range-incl 0 360 5))
-        xs        (map #(+ cent-x (* radius (cos %))) rads)
-        ys        (map #(+ cent-y (* radius (sin %))) rads)]
-    (stroke 0 30)
-    (no-fill)
-    (ellipse cent-x cent-y (* radius 2) (* radius 2))
-    (stroke 20 50 70)
-    (dorun (map point xs ys))))
+        rads      (map q/radians (range-incl 0 360 5))
+        xs        (map #(+ cent-x (* radius (q/cos %))) rads)
+        ys        (map #(+ cent-y (* radius (q/sin %))) rads)]
+    (q/stroke 0 30)
+    (q/no-fill)
+    (q/ellipse cent-x cent-y (* radius 2) (* radius 2))
+    (q/stroke 20 50 70)
+    (dorun (map q/point xs ys))))
 
-(defsketch gen-art-11
+(q/defsketch gen-art-11
   :title "Dotted Circle"
   :setup setup
   :size [500 300])

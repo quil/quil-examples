@@ -1,7 +1,7 @@
 (ns quil-sketches.graphics
-  (:require [quil.core :refer :all]
+  (:require [quil.core :as q]
             [quil.helpers.drawing :refer [line-join-points]]
-            [quil.helpers.seqs :refer [range-incl steps]]))
+            [quil.helpers.seqs :refer [steps]]))
 
 ;; Example of using graphics via create-graphics and with-graphics. On each
 ;; iteration 1 spiral will be drawn on graphics and then we tile all screen
@@ -20,40 +20,40 @@
   "Draws spiral on current surface: on applet or on graphics if inside
   with-graphics macro."
   []
-  (with-translation [cent-x cent-y]
-    (with-rotation [(/ (frame-count) -5 Math/PI)]
-      (background 255)
-      (stroke-weight 2)
-      (smooth)
+  (q/with-translation [cent-x cent-y]
+    (q/with-rotation [(/ (q/frame-count) -5 Math/PI)]
+      (q/background 255)
+      (q/stroke-weight 2)
+      (q/smooth)
       (let [radius 20
-            radians (map radians (steps 0 5))
+            radians (map q/radians (steps 0 5))
             radii (range 5 (/ spiral-size 2) 0.1)
-            xs (map (fn [radians radius] (* radius (cos radians))) radians radii)
-            ys (map (fn [radians radius] (* radius (sin radians))) radians radii)
+            xs (map (fn [radians radius] (* radius (q/cos radians))) radians radii)
+            ys (map (fn [radians radius] (* radius (q/sin radians))) radians radii)
             line-args (line-join-points xs ys)]
-        (stroke 0 30)
-        (no-fill)
-        (ellipse cent-x cent-y (* radius 2) (* radius 2))
-        (stroke 20 50 70)
-        (dorun (map #(apply line %) line-args))))))
+        (q/stroke 0 30)
+        (q/no-fill)
+        (q/ellipse cent-x cent-y (* radius 2) (* radius 2))
+        (q/stroke 20 50 70)
+        (dorun (map #(apply q/line %) line-args))))))
 
 (defn setup
   "Create graphics in setup and store it in state."
   []
-  (let [gr (create-graphics spiral-size spiral-size :java2d)]
-   (set-state! :spiral gr)))
+  (let [gr (q/create-graphics spiral-size spiral-size :java2d)]
+    (q/set-state! :spiral gr)))
 
 (defn draw []
-  (let [gr (state :spiral)]
-    ; Draw spiral on graphics.
-    (with-graphics gr
+  (let [gr (q/state :spiral)]
+    ;; Draw spiral on graphics.
+    (q/with-graphics gr
       (draw-spiral))
-    ; Tile screen with spirals using graphics.
-    (doseq [x (range 0 (width) spiral-size)
-            y (range 0 (height) spiral-size)]
-      (image gr x y))))
+    ;; Tile screen with spirals using graphics.
+    (doseq [x (range 0 (q/width) spiral-size)
+            y (range 0 (q/height) spiral-size)]
+      (q/image gr x y))))
 
-(defsketch graphics
+(q/defsketch graphics
   :title "Graphics"
   :setup setup
   :draw draw

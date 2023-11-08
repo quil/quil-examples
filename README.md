@@ -13,6 +13,36 @@ Clone repo with examples to you machine:
 git clone https://github.com/quil/quil-examples.git
 ```
 
+##### Using the Clojure CLI
+
+[Install clojure](https://clojure.org/guides/install_clojure), and from within the `quil-examples` repo, start a repl and execute a sketch by evaluating a namespace:
+
+```
+$ clj -M --repl
+Clojure 1.11.1
+user=> (require 'quil-sketches.gen-art.01-cross-with-circle :reload)
+```
+
+Alternatively, sketches with a `-main` function in the namespace can also be executed like:
+
+```
+$ clj -M -m quil-sketches.graphics
+```
+
+(`ESC` to close a sketch window, and `ctrl-D` or `ctrl-C` will quit quickly after the sketch displays).
+
+Or with commandline arguments to the `-main` function:
+
+```
+$ clj -M -m quil-sketches.automata 30
+```
+
+Finally, `-X` can be used to invoke a specific function:
+
+```
+$ clj -X quil-sketches.key-capture/-main
+```
+
 ##### Using lein REPL
 
 Start REPL:
@@ -58,6 +88,9 @@ Start cider:
 ```
 M-x cider-jack-in
 ```
+
+It may prompt for which command to use, either `lein` or `clojure-cli` should work, depending on which tools are installed locally.
+
 Evaluate opened file:
 ```
 C-c C-k

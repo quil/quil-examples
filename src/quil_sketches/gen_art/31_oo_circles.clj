@@ -1,6 +1,5 @@
-(ns quil-sketches.gen-art.31-oo_circles
-  (:require [quil.core :refer :all]
-            [quil.helpers.calc :refer [mod-range]]))
+(ns quil-sketches.gen-art.31-oo-circles
+  (:require [quil.core :as q]))
 
 ;; Example 31 - OO Circles
 ;; Taken from Listing 6.4, p117
@@ -80,13 +79,13 @@
 (def num-circles 10)
 
 (defn mk-circle []
-  {:x        (random (width))
-   :y        (random (height))
-   :radius   (+ 10 (random 100))
-   :line-col (color (random 255) (random 255) (random 255))
-   :fill-col [(random 255) (random 255) (random 255) (random 255)]
-   :xmove    (- (random 10) 5)
-   :ymove    (- (random 10) 5)})
+  {:x        (q/random (q/width))
+   :y        (q/random (q/height))
+   :radius   (+ 10 (q/random 100))
+   :line-col (q/color (q/random 255) (q/random 255) (q/random 255))
+   :fill-col [(q/random 255) (q/random 255) (q/random 255) (q/random 255)]
+   :xmove    (- (q/random 10) 5)
+   :ymove    (- (q/random 10) 5)})
 
 (defn add-circles
   [circles*]
@@ -96,26 +95,26 @@
 
 (defn mouse-released
   []
-  (add-circles (state :circles)))
+  (add-circles (q/state :circles)))
 
 (defn setup []
-  (background 255)
-  (smooth)
-  (stroke-weight 1)
-  (fill 150 50)
+  (q/background 255)
+  (q/smooth)
+  (q/stroke-weight 1)
+  (q/fill 150 50)
   (let [circles* (atom [])]
     (add-circles circles*)
-    (set-state! :circles circles*)))
+    (q/set-state! :circles circles*)))
 
 (defn update-circle
   [{:keys [x y xmove ymove radius] :as circle}]
 
   (let [new-x (+ x xmove)
-        new-x (if (< new-x (- 0 radius)) (+ (width) radius) new-x)
-        new-x (if (> new-x (+ (width) radius)) (- 0 radius) new-x)
+        new-x (if (< new-x (- 0 radius)) (+ (q/width) radius) new-x)
+        new-x (if (> new-x (+ (q/width) radius)) (- 0 radius) new-x)
         new-y (+ y ymove)
-        new-y (if (< new-y (- 0 radius)) (+ (height) radius) new-y)
-        new-y (if (> new-y (+ (height) radius)) (- 0 radius) new-y)]
+        new-y (if (< new-y (- 0 radius)) (+ (q/height) radius) new-y)
+        new-y (if (> new-y (+ (q/height) radius)) (- 0 radius) new-y)]
     (assoc circle :x new-x :y new-y)))
 
 (defn update-circles
@@ -123,22 +122,22 @@
   (map update-circle circles))
 
 (defn draw-circle
-  [{:keys [x y radius line-col fill-col alph]}]
-  (no-stroke)
-  (apply fill fill-col)
-  (ellipse x y (* 2 radius) (* 2 radius))
-  (stroke line-col 150)
-  (no-fill)
-  (ellipse x y 10 10))
+  [{:keys [x y radius line-col fill-col]}]
+  (q/no-stroke)
+  (apply q/fill fill-col)
+  (q/ellipse x y (* 2 radius) (* 2 radius))
+  (q/stroke line-col 150)
+  (q/no-fill)
+  (q/ellipse x y 10 10))
 
 (defn draw []
-  (background 255)
-  (let [circles* (state :circles)
+  (q/background 255)
+  (let [circles* (q/state :circles)
         circles (swap! circles* update-circles)]
     (doseq [c circles]
       (draw-circle c))))
 
-(defsketch gen-art-31
+(q/defsketch gen-art-31
   :title "OO Circles"
   :setup setup
   :draw draw

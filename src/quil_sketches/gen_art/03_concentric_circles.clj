@@ -1,5 +1,5 @@
 (ns quil-sketches.gen-art.03-concentric-circles
-  (:require [quil.core :refer :all]))
+  (:require [quil.core :as q]))
 
 ;; Example 3 - Concentric circles drawn using traces
 ;; Taken from Listing 2.3, p37
@@ -27,25 +27,25 @@
 ;; }
 
 (defn setup []
-  (frame-rate 24)
-  (smooth)
-  (background 180)
-  (stroke 0)
-  (stroke-weight 1)
-  (no-fill)
-  (set-state! :diam (atom 10)
-              :cent-x (/ (width) 2)
-              :cent-y (/ (height) 2)))
+  (q/frame-rate 24)
+  (q/smooth)
+  (q/background 180)
+  (q/stroke 0)
+  (q/stroke-weight 1)
+  (q/no-fill)
+  (q/set-state! :diam (atom 10)
+                :cent-x (/ (q/width) 2)
+                :cent-y (/ (q/height) 2)))
 
 (defn draw []
-  (let [cent-x (state :cent-x)
-        cent-y (state :cent-y)
-        diam   (state :diam)]
+  (let [cent-x (q/state :cent-x)
+        cent-y (q/state :cent-y)
+        diam   (q/state :diam)]
     (when (<= @diam 400)
-      (ellipse cent-x cent-y @diam @diam)
+      (q/ellipse cent-x cent-y @diam @diam)
       (swap! diam + 10))))
 
-(defsketch gen-art-3
+(q/defsketch gen-art-3
   :title "Concentric Circles"
   :setup setup
   :draw draw

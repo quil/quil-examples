@@ -1,5 +1,5 @@
 (ns quil-sketches.gen-art.17-circle-from-fading-opposing-lines
-  (:require [quil.core :refer :all]
+  (:require [quil.core :as q]
             [quil.helpers.seqs :refer [range-incl]]
             [quil.helpers.calc :refer [mul-add]]))
 
@@ -38,29 +38,29 @@
 
 
 (defn setup []
-  (background 255)
-  (stroke-weight 0.5)
-  (smooth)
-  (stroke 20 50 70)
+  (q/background 255)
+  (q/stroke-weight 0.5)
+  (q/smooth)
+  (q/stroke 20 50 70)
   (let [radius   130
         cent-x   250
         cent-y   150
         angles   (range-incl 0 360)
-        rads     (map radians angles)
-        opp-rads (map + rads (repeat PI))
+        rads     (map q/radians angles)
+        opp-rads (map + rads (repeat q/PI))
         colours  (cycle (range-incl 255 0 -1))
-        x1s      (map #(mul-add (cos %) radius cent-x) rads)
-        y1s      (map #(mul-add (sin %) radius cent-y) rads)
-        x2s      (map #(mul-add (cos %) radius cent-x) opp-rads)
-        y2s      (map #(mul-add (sin %) radius cent-y) opp-rads)]
+        x1s      (map #(mul-add (q/cos %) radius cent-x) rads)
+        y1s      (map #(mul-add (q/sin %) radius cent-y) rads)
+        x2s      (map #(mul-add (q/cos %) radius cent-x) opp-rads)
+        y2s      (map #(mul-add (q/sin %) radius cent-y) opp-rads)]
     (doall (map (fn [x1 y1 x2 y2 col]
-                  (stroke col)
-                  (line x1 y1 x2 y2))
+                  (q/stroke col)
+                  (q/line x1 y1 x2 y2))
                 x1s y1s x2s y2s colours))))
 
-(defsketch gen-art-17
- :title "Circle from Fading Opposing Lines"
- :setup setup
- :size [500 300])
+(q/defsketch gen-art-17
+  :title "Circle from Fading Opposing Lines"
+  :setup setup
+  :size [500 300])
 
 (defn -main [& args])

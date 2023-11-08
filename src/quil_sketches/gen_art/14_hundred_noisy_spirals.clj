@@ -1,5 +1,5 @@
 (ns quil-sketches.gen-art.14-hundred-noisy-spirals
-  (:require [quil.core :refer :all]
+  (:require [quil.core :as q]
             [quil.helpers.drawing :refer [line-join-points]]
             [quil.helpers.seqs :refer [range-incl steps]]
             [quil.helpers.calc :refer [mul-add]]))
@@ -43,28 +43,27 @@
 ;; }
 
 (defn setup []
-  (background 255)
-  (stroke-weight 0.5)
-  (smooth)
+  (q/background 255)
+  (q/stroke-weight 0.5)
+  (q/smooth)
   (dotimes [_ 100]
-    (let [radius      100
-          cent-x      250
+    (let [cent-x      250
           cent-y      150
           start-angle (rand 360)
           end-angle   (+ 1440 (rand 1440))
           angle-step  (+ 5 (rand 3))
           rad-noise   (steps (rand 10) 0.05)
-          rad-noise   (map #(* 200 (noise %)) rad-noise)
-          rads        (map radians (range-incl start-angle end-angle angle-step))
+          rad-noise   (map #(* 200 (q/noise %)) rad-noise)
+          rads        (map q/radians (range-incl start-angle end-angle angle-step))
           radii       (steps 10 0.5)
           radii       (map (fn [rad noise] (+ rad noise -100)) radii rad-noise)
-          xs          (map (fn [rad radius] (mul-add (cos rad) radius cent-x)) rads radii)
-          ys          (map (fn [rad radius] (mul-add (sin rad) radius cent-y)) rads radii)
+          xs          (map (fn [rad radius] (mul-add (q/cos rad) radius cent-x)) rads radii)
+          ys          (map (fn [rad radius] (mul-add (q/sin rad) radius cent-y)) rads radii)
           line-args   (line-join-points xs ys)]
-      (stroke (rand 20) (rand 50) (rand 70) 80)
-      (dorun (map #(apply line %) line-args)))))
+      (q/stroke (rand 20) (rand 50) (rand 70) 80)
+      (dorun (map #(apply q/line %) line-args)))))
 
-(defsketch gen-art-14
+(q/defsketch gen-art-14
   :title "100 Noisy Spirals"
   :setup setup
   :size [500 300])

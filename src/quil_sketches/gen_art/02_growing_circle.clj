@@ -1,5 +1,5 @@
 (ns quil-sketches.gen-art.02-growing-circle
-  (:require [quil.core :refer :all]
+  (:require [quil.core :as q]
             [quil.helpers.seqs :refer [seq->stream range-incl]]))
 
 ;; Example 2 - Growing Circle
@@ -29,26 +29,26 @@
 ;; }
 
 (defn setup []
-  (frame-rate 24)
-  (smooth)
-  (background 180)
-  (stroke 0)
-  (stroke-weight 5)
-  (fill 255 25)
+  (q/frame-rate 24)
+  (q/smooth)
+  (q/background 180)
+  (q/stroke 0)
+  (q/stroke-weight 5)
+  (q/fill 255 25)
   (let [diams (range-incl 10 400 10)]
-    (set-state! :diam (seq->stream diams)
-                :cent-x (/ (width) 2)
-                :cent-y (/ (height) 2))))
+    (q/set-state! :diam (seq->stream diams)
+                  :cent-x (/ (q/width) 2)
+                  :cent-y (/ (q/height) 2))))
 
 (defn draw []
-  (let [cent-x (state :cent-x)
-        cent-y (state :cent-y)
-        diam   ((state :diam))]
+  (let [cent-x (q/state :cent-x)
+        cent-y (q/state :cent-y)
+        diam   ((q/state :diam))]
     (when diam
-      (background 180)
-      (ellipse cent-x cent-y diam diam))))
+      (q/background 180)
+      (q/ellipse cent-x cent-y diam diam))))
 
-(defsketch gen-art-2
+(q/defsketch gen-art-2
   :title "Growing circle"
   :setup setup
   :draw draw

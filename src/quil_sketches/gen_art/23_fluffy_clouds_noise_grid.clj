@@ -1,7 +1,8 @@
 (ns quil-sketches.gen-art.23-fluffy-clouds-noise-grid
-  (:require [quil.core :refer :all]
-            [quil.helpers.seqs :refer [range-incl]]
-            [quil.helpers.calc :refer [mul-add]]))-
+  (:require
+   [quil.core :as q]
+   [quil.helpers.calc :refer [mul-add]]
+   [quil.helpers.seqs :refer [range-incl]]))
 
 ;; Example 23 - Fluffy Clouds 2D Noise Grid
 ;; Taken from Section 5.1.2, p88 (figure 5.4)
@@ -40,32 +41,32 @@
 
 (defn draw-point
   [x y noise-factor]
-  (push-matrix)
-  (translate x y)
-  (rotate (* noise-factor (radians 540)))
+  (q/push-matrix)
+  (q/translate x y)
+  (q/rotate (* noise-factor (q/radians 540)))
   (let [edge-size (* noise-factor 35)
         grey (mul-add noise-factor 120 150)
         alph (mul-add noise-factor 120 150)]
-    (no-stroke)
-    (fill grey alph)
-    (ellipse 0 0 edge-size (/ edge-size 2))
-    (pop-matrix)))
+    (q/no-stroke)
+    (q/fill grey alph)
+    (q/ellipse 0 0 edge-size (/ edge-size 2))
+    (q/pop-matrix)))
 
 (defn draw-all-points
   [x-start y-start]
   (dorun
-   (for [y (range-incl 0 (height) 5)
-         x (range-incl 0 (width) 5)]
+   (for [y (range-incl 0 (q/height) 5)
+         x (range-incl 0 (q/width) 5)]
      (let [x-noise (mul-add x 0.01 x-start)
            y-noise (mul-add y 0.01 y-start)]
-       (draw-point x y (noise x-noise y-noise))))))
+       (draw-point x y (q/noise x-noise y-noise))))))
 
 (defn setup []
-  (smooth)
-  (background 0)
-  (draw-all-points (random 10) (random 10)))
+  (q/smooth)
+  (q/background 0)
+  (draw-all-points (q/random 10) (q/random 10)))
 
-(defsketch gen-art-23
+(q/defsketch gen-art-23
   :title "Fluffy Clouds 2D Noise Grid"
   :setup setup
   :size [300 300])

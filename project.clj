@@ -2,5 +2,5 @@
   :description "Examples of using Quil library"
   :url "https://github.com/quil/quil-examples"
 
-  :dependencies [[org.clojure/clojure "1.8.0"]
-                 [quil "3.0.0"]])
+  :dependencies [[org.clojure/clojure "1.11.1"]
+                 [quil "4.3.1323"]])

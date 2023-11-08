@@ -1,7 +1,7 @@
 (ns quil-sketches.gen-art.29-spiral-sphere
-  (:require [quil.core :refer :all]
-            [quil.helpers.drawing :refer [line-join-points]]
-            [quil.helpers.calc :refer [mul-add]]))
+  (:require
+   [quil.core :as q]
+   [quil.helpers.drawing :refer [line-join-points]]))
 
 ;; Example 29 - Spiral Sphere
 ;; Taken from Listing 5.7, p100
@@ -52,27 +52,27 @@
 (def radius 100)
 
 (defn setup []
-  (background 255)
-  (stroke 00))
+  (q/background 255)
+  (q/stroke 0))
 
 (defn draw []
-  (background 255)
-  (translate (/ (width) 2) (/ (height) 2) 0)
-  (rotate-y (* (frame-count) 0.03))
-  (rotate-x (* (frame-count) 0.04))
+  (q/background 255)
+  (q/translate (/ (q/width) 2) (/ (q/height) 2) 0)
+  (q/rotate-y (* (q/frame-count) 0.03))
+  (q/rotate-x (* (q/frame-count) 0.04))
   (let [line-args (for [t (range 0 180)]
                     (let [s        (* t 18)
-                          radian-s (radians s)
-                          radian-t (radians t)
-                          x (* radius  (cos radian-s) (sin radian-t))
-                          y (* radius  (sin radian-s) (sin radian-t))
-                          z (* radius (cos radian-t))]
+                          radian-s (q/radians s)
+                          radian-t (q/radians t)
+                          x (* radius (q/cos radian-s) (q/sin radian-t))
+                          y (* radius (q/sin radian-s) (q/sin radian-t))
+                          z (* radius (q/cos radian-t))]
                       [x y z]))]
     (dorun
-     (map #(apply line %) (line-join-points line-args)))))
+     (map #(apply q/line %) (line-join-points line-args)))))
 
 
-(defsketch gen-art-29
+(q/defsketch gen-art-29
   :title "Spiral Sphere"
   :setup setup
   :draw draw
